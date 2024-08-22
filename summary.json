@@ -1,0 +1,1051 @@
+{
+    "number": 68,
+    "content": [
+        {
+            "id": 1,
+            "title": "PAL: Program-aided Language Models",
+            "abstract": "Large language models (LLMs) have recently demonstrated an impressive ability\nto perform arithmetic and symbolic reasoning tasks, when provided with a few\nexamples at test time (\"few-shot prompting\"). Much of this success can be\nattributed to prompting methods such as \"chain-of-thought'', which employ LLMs\nfor both understanding the problem description by decomposing it into steps, as\nwell as solving each step of the problem. While LLMs seem to be adept at this\nsort of step-by-step decomposition, LLMs often make logical and arithmetic\nmistakes in the solution part, even when the problem is decomposed correctly.\nIn this paper, we present Program-Aided Language models (PAL): a novel approach\nthat uses the LLM to read natural language problems and generate programs as\nthe intermediate reasoning steps, but offloads the solution step to a runtime\nsuch as a Python interpreter. With PAL, decomposing the natural language\nproblem into runnable steps remains the only learning task for the LLM, while\nsolving is delegated to the interpreter. We demonstrate this synergy between a\nneural LLM and a symbolic interpreter across 13 mathematical, symbolic, and\nalgorithmic reasoning tasks from BIG-Bench Hard and other benchmarks. In all\nthese natural language reasoning tasks, generating code using an LLM and\nreasoning using a Python interpreter leads to more accurate results than much\nlarger models. For example, PAL using Codex achieves state-of-the-art few-shot\naccuracy on the GSM8K benchmark of math word problems, surpassing PaLM-540B\nwhich uses chain-of-thought by absolute 15% top-1. Our code and data are\npublicly available at http://reasonwithpal.com/ .",
+            "authors": [
+                "Luyu Gao",
+                "Aman Madaan",
+                "Shuyan Zhou",
+                "Uri Alon",
+                "Pengfei Liu",
+                "Yiming Yang",
+                "Jamie Callan",
+                "Graham Neubig"
+            ],
+            "year": 2022,
+            "url": "https://arxiv.org/abs/2211.10435"
+        },
+        {
+            "id": 2,
+            "title": "Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks",
+            "abstract": "Recently, there has been significant progress in teaching language models to\nperform step-by-step reasoning to solve complex numerical reasoning tasks.\nChain-of-thoughts prompting (CoT) is by far the state-of-art method for these\ntasks. CoT uses language models to perform both reasoning and computation in\nthe multi-step `thought' process. To disentangle computation from reasoning, we\npropose `Program of Thoughts' (PoT), which uses language models (mainly Codex)\nto express the reasoning process as a program. The computation is relegated to\nan external computer, which executes the generated programs to derive the\nanswer. We evaluate PoT on five math word problem datasets (GSM, AQuA, SVAMP,\nTabMWP, MultiArith) and three financial-QA datasets (FinQA, ConvFinQA, TATQA)\nfor both few-shot and zero-shot setups. Under both few-shot and zero-shot\nsettings, PoT can show an average performance gain over CoT by around 12\\%\nacross all the evaluated datasets. By combining PoT with self-consistency\ndecoding, we can achieve SoTA performance on all math problem datasets and\nnear-SoTA performance on financial datasets. All of our data and code are\nreleased in Github https://github.com/wenhuchen/Program-of-Thoughts",
+            "authors": [
+                "Wenhu Chen",
+                "Xueguang Ma",
+                "Xinyi Wang",
+                "William W. Cohen"
+            ],
+            "year": 2022,
+            "url": "https://arxiv.org/abs/2211.12588"
+        },
+        {
+            "id": 3,
+            "title": "Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification",
+            "abstract": "Recent progress in large language models (LLMs) like GPT-4 and PaLM-2 has\nbrought significant advancements in addressing math reasoning problems. In\nparticular, OpenAI's latest version of GPT-4, known as GPT-4 Code Interpreter,\nshows remarkable performance on challenging math datasets. In this paper, we\nexplore the effect of code on enhancing LLMs' reasoning capability by\nintroducing different constraints on the \\textit{Code Usage Frequency} of GPT-4\nCode Interpreter. We found that its success can be largely attributed to its\npowerful skills in generating and executing code, evaluating the output of code\nexecution, and rectifying its solution when receiving unreasonable outputs.\nBased on this insight, we propose a novel and effective prompting method,\nexplicit \\uline{c}ode-based \\uline{s}elf-\\uline{v}erification~(CSV), to further\nboost the mathematical reasoning potential of GPT-4 Code Interpreter. This\nmethod employs a zero-shot prompt on GPT-4 Code Interpreter to encourage it to\nuse code to self-verify its answers. In instances where the verification state\nregisters as ``False'', the model shall automatically amend its solution,\nanalogous to our approach of rectifying errors during a mathematics\nexamination. Furthermore, we recognize that the states of the verification\nresult indicate the confidence of a solution, which can improve the\neffectiveness of majority voting. With GPT-4 Code Interpreter and CSV, we\nachieve an impressive zero-shot accuracy on MATH dataset \\textbf{(53.9\\% $\\to$\n84.3\\%)}.",
+            "authors": [
+                "Aojun Zhou",
+                "Ke Wang",
+                "Zimu Lu",
+                "Weikang Shi",
+                "Sichun Luo",
+                "Zipeng Qin",
+                "Shaoqing Lu",
+                "Anya Jia",
+                "Linqi Song",
+                "Mingjie Zhan",
+                "Hongsheng Li"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2308.07921"
+        },
+        {
+            "id": 4,
+            "title": "MathCoder: Seamless Code Integration in LLMs for Enhanced Mathematical Reasoning",
+            "abstract": "The recently released GPT-4 Code Interpreter has demonstrated remarkable\nproficiency in solving challenging math problems, primarily attributed to its\nability to seamlessly reason with natural language, generate code, execute\ncode, and continue reasoning based on the execution output. In this paper, we\npresent a method to fine-tune open-source language models, enabling them to use\ncode for modeling and deriving math equations and, consequently, enhancing\ntheir mathematical reasoning abilities. We propose a method of generating novel\nand high-quality datasets with math problems and their code-based solutions,\nreferred to as MathCodeInstruct. Each solution interleaves natural language,\ncode, and execution results. We also introduce a customized supervised\nfine-tuning and inference approach. This approach yields the MathCoder models,\na family of models capable of generating code-based solutions for solving\nchallenging math problems. Impressively, the MathCoder models achieve\nstate-of-the-art scores among open-source LLMs on the MATH (45.2%) and GSM8K\n(83.9%) datasets, substantially outperforming other open-source alternatives.\nNotably, the MathCoder model not only surpasses ChatGPT-3.5 and PaLM-2 on GSM8K\nand MATH but also outperforms GPT-4 on the competition-level MATH dataset. The\ndataset and models will be released at https://github.com/mathllm/MathCoder.",
+            "authors": [
+                "Ke Wang",
+                "Houxing Ren",
+                "Aojun Zhou",
+                "Zimu Lu",
+                "Sichun Luo",
+                "Weikang Shi",
+                "Renrui Zhang",
+                "Linqi Song",
+                "Mingjie Zhan",
+                "Hongsheng Li"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2310.03731"
+        },
+        {
+            "id": 5,
+            "title": "Chain of Code: Reasoning with a Language Model-Augmented Code Emulator",
+            "abstract": "Code provides a general syntactic structure to build complex programs and\nperform precise computations when paired with a code interpreter - we\nhypothesize that language models (LMs) can leverage code-writing to improve\nChain of Thought reasoning not only for logic and arithmetic tasks, but also\nfor semantic ones (and in particular, those that are a mix of both). For\nexample, consider prompting an LM to write code that counts the number of times\nit detects sarcasm in an essay: the LM may struggle to write an implementation\nfor \"detect_sarcasm(string)\" that can be executed by the interpreter (handling\nthe edge cases would be insurmountable). However, LMs may still produce a valid\nsolution if they not only write code, but also selectively \"emulate\" the\ninterpreter by generating the expected output of \"detect_sarcasm(string)\". In\nthis work, we propose Chain of Code (CoC), a simple yet surprisingly effective\nextension that improves LM code-driven reasoning. The key idea is to encourage\nLMs to format semantic sub-tasks in a program as flexible pseudocode that the\ninterpreter can explicitly catch undefined behaviors and hand off to simulate\nwith an LM (as an \"LMulator\"). Experiments demonstrate that Chain of Code\noutperforms Chain of Thought and other baselines across a variety of\nbenchmarks; on BIG-Bench Hard, Chain of Code achieves 84%, a gain of 12% over\nChain of Thought. In a nutshell, CoC broadens the scope of reasoning questions\nthat LMs can answer by \"thinking in code\".",
+            "authors": [
+                "Chengshu Li",
+                "Jacky Liang",
+                "Andy Zeng",
+                "Xinyun Chen",
+                "Karol Hausman",
+                "Dorsa Sadigh",
+                "Sergey Levine",
+                "Li Fei-Fei",
+                "Fei Xia",
+                "Brian Ichter"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2312.04474"
+        },
+        {
+            "id": 6,
+            "title": "ReGAL: Refactoring Programs to Discover Generalizable Abstractions",
+            "abstract": "While large language models (LLMs) are increasingly being used for program\nsynthesis, they lack the global view needed to develop useful abstractions;\nthey generally predict programs one at a time, often repeating the same\nfunctionality. Generating redundant code from scratch is both inefficient and\nerror-prone. To address this, we propose Refactoring for Generalizable\nAbstraction Learning (ReGAL), a gradient-free method for learning a library of\nreusable functions via code refactorization, i.e., restructuring code without\nchanging its execution output. ReGAL learns from a small set of existing\nprograms, iteratively verifying and refining its abstractions via execution. We\nfind that the shared function libraries discovered by ReGAL make programs\neasier to predict across diverse domains. On five datasets -- LOGO graphics\ngeneration, Date reasoning, TextCraft (a Minecraft-based text-game) MATH, and\nTabMWP -- both open-source and proprietary LLMs improve in accuracy when\npredicting programs with ReGAL functions. For CodeLlama-13B, ReGAL results in\nabsolute accuracy increases of 11.5% on LOGO, 26.1% on date understanding, and\n8.1% on TextCraft, outperforming GPT-3.5 in two of three domains. Our analysis\nreveals ReGAL's abstractions encapsulate frequently-used subroutines as well as\nenvironment dynamics.",
+            "authors": [
+                "Elias Stengel-Eskin",
+                "Archiki Prasad",
+                "Mohit Bansal"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2401.16467"
+        },
+        {
+            "id": 7,
+            "title": "Executable Code Actions Elicit Better LLM Agents",
+            "abstract": "Large Language Model (LLM) agents, capable of performing a broad range of\nactions, such as invoking tools and controlling robots, show great potential in\ntackling real-world challenges. LLM agents are typically prompted to produce\nactions by generating JSON or text in a pre-defined format, which is usually\nlimited by constrained action space (e.g., the scope of pre-defined tools) and\nrestricted flexibility (e.g., inability to compose multiple tools). This work\nproposes to use executable Python code to consolidate LLM agents' actions into\na unified action space (CodeAct). Integrated with a Python interpreter, CodeAct\ncan execute code actions and dynamically revise prior actions or emit new\nactions upon new observations through multi-turn interactions. Our extensive\nanalysis of 17 LLMs on API-Bank and a newly curated benchmark shows that\nCodeAct outperforms widely used alternatives (up to 20% higher success rate).\nThe encouraging performance of CodeAct motivates us to build an open-source LLM\nagent that interacts with environments by executing interpretable code and\ncollaborates with users using natural language. To this end, we collect an\ninstruction-tuning dataset CodeActInstruct that consists of 7k multi-turn\ninteractions using CodeAct. We show that it can be used with existing data to\nimprove models in agent-oriented tasks without compromising their general\ncapability. CodeActAgent, finetuned from Llama2 and Mistral, is integrated with\nPython interpreter and uniquely tailored to perform sophisticated tasks (e.g.,\nmodel training) using existing libraries and autonomously self-debug.",
+            "authors": [
+                "Xingyao Wang",
+                "Yangyi Chen",
+                "Lifan Yuan",
+                "Yizhe Zhang",
+                "Yunzhu Li",
+                "Hao Peng",
+                "Heng Ji"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2402.01030"
+        },
+        {
+            "id": 8,
+            "title": "Exploring Hybrid Question Answering via Program-based Prompting",
+            "abstract": "Question answering over heterogeneous data requires reasoning over diverse\nsources of data, which is challenging due to the large scale of information and\norganic coupling of heterogeneous data. Various approaches have been proposed\nto address these challenges. One approach involves training specialized\nretrievers to select relevant information, thereby reducing the input length.\nAnother approach is to transform diverse modalities of data into a single\nmodality, simplifying the task difficulty and enabling more straightforward\nprocessing. In this paper, we propose HProPro, a novel program-based prompting\nframework for the hybrid question answering task. HProPro follows the code\ngeneration and execution paradigm. In addition, HProPro integrates various\nfunctions to tackle the hybrid reasoning scenario. Specifically, HProPro\ncontains function declaration and function implementation to perform hybrid\ninformation-seeking over data from various sources and modalities, which\nenables reasoning over such data without training specialized retrievers or\nperforming modal transformations. Experimental results on two typical hybrid\nquestion answering benchmarks HybridQA and MultiModalQA demonstrate the\neffectiveness of HProPro: it surpasses all baseline systems and achieves the\nbest performances in the few-shot settings on both datasets.",
+            "authors": [
+                "Qi Shi",
+                "Han Cui",
+                "Haofeng Wang",
+                "Qingfu Zhu",
+                "Wanxiang Che",
+                "Ting Liu"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2402.10812"
+        },
+        {
+            "id": 9,
+            "title": "Eliciting Better Multilingual Structured Reasoning from LLMs through Code",
+            "abstract": "The development of large language models (LLM) has shown progress on\nreasoning, though studies have largely considered either English or simple\nreasoning tasks. To address this, we introduce a multilingual structured\nreasoning and explanation dataset, termed xSTREET, that covers four tasks\nacross six languages. xSTREET exposes a gap in base LLM performance between\nEnglish and non-English reasoning tasks.\n  We then propose two methods to remedy this gap, building on the insight that\nLLMs trained on code are better reasoners. First, at training time, we augment\na code dataset with multilingual comments using machine translation while\nkeeping program code as-is. Second, at inference time, we bridge the gap\nbetween training and inference by employing a prompt structure that\nincorporates step-by-step code primitives to derive new facts and find a\nsolution. Our methods show improved multilingual performance on xSTREET, most\nnotably on the scientific commonsense reasoning subtask. Furthermore, the\nmodels show no regression on non-reasoning tasks, thus demonstrating our\ntechniques maintain general-purpose abilities.",
+            "authors": [
+                "Bryan Li",
+                "Tamer Alkhouli",
+                "Daniele Bonadiman",
+                "Nikolaos Pappas",
+                "Saab Mansour"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.02567"
+        },
+        {
+            "id": 10,
+            "title": "FlowMind: Automatic Workflow Generation with LLMs",
+            "abstract": "The rapidly evolving field of Robotic Process Automation (RPA) has made\nsignificant strides in automating repetitive processes, yet its effectiveness\ndiminishes in scenarios requiring spontaneous or unpredictable tasks demanded\nby users. This paper introduces a novel approach, FlowMind, leveraging the\ncapabilities of Large Language Models (LLMs) such as Generative Pretrained\nTransformer (GPT), to address this limitation and create an automatic workflow\ngeneration system. In FlowMind, we propose a generic prompt recipe for a\nlecture that helps ground LLM reasoning with reliable Application Programming\nInterfaces (APIs). With this, FlowMind not only mitigates the common issue of\nhallucinations in LLMs, but also eliminates direct interaction between LLMs and\nproprietary data or code, thus ensuring the integrity and confidentiality of\ninformation - a cornerstone in financial services. FlowMind further simplifies\nuser interaction by presenting high-level descriptions of auto-generated\nworkflows, enabling users to inspect and provide feedback effectively. We also\nintroduce NCEN-QA, a new dataset in finance for benchmarking question-answering\ntasks from N-CEN reports on funds. We used NCEN-QA to evaluate the performance\nof workflows generated by FlowMind against baseline and ablation variants of\nFlowMind. We demonstrate the success of FlowMind, the importance of each\ncomponent in the proposed lecture recipe, and the effectiveness of user\ninteraction and feedback in FlowMind.",
+            "authors": [
+                "Zhen Zeng",
+                "William Watson",
+                "Nicole Cho",
+                "Saba Rahimi",
+                "Shayleen Reynolds",
+                "Tucker Balch",
+                "Manuela Veloso"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2404.13050"
+        },
+        {
+            "id": 11,
+            "title": "Language Models as Compilers: Simulating Pseudocode Execution Improves Algorithmic Reasoning in Language Models",
+            "abstract": "Algorithmic reasoning refers to the ability to understand the complex\npatterns behind the problem and decompose them into a sequence of reasoning\nsteps towards the solution. Such nature of algorithmic reasoning makes it a\nchallenge for large language models (LLMs), even though they have demonstrated\npromising performance in other reasoning tasks. Within this context, some\nrecent studies use programming languages (e.g., Python) to express the\nnecessary logic for solving a given instance/question (e.g.,\nProgram-of-Thought) as inspired by their strict and precise syntaxes. However,\nit is non-trivial to write an executable code that expresses the correct logic\non the fly within a single inference call. Also, the code generated\nspecifically for an instance cannot be reused for others, even if they are from\nthe same task and might require identical logic to solve. This paper presents\nThink-and-Execute, a novel framework that decomposes the reasoning process of\nlanguage models into two steps. (1) In Think, we discover a task-level logic\nthat is shared across all instances for solving a given task and then express\nthe logic with pseudocode; (2) In Execute, we further tailor the generated\npseudocode to each instance and simulate the execution of the code. With\nextensive experiments on seven algorithmic reasoning tasks, we demonstrate the\neffectiveness of Think-and-Execute. Our approach better improves LMs' reasoning\ncompared to several strong baselines performing instance-specific reasoning\n(e.g., CoT and PoT), suggesting the helpfulness of discovering task-level\nlogic. Also, we show that compared to natural language, pseudocode can better\nguide the reasoning of LMs, even though they are trained to follow natural\nlanguage instructions.",
+            "authors": [
+                "Hyungjoo Chae",
+                "Yeonghyeon Kim",
+                "Seungone Kim",
+                "Kai Tzu-iunn Ong",
+                "Beong-woo Kwak",
+                "Moohyeon Kim",
+                "Seonghwan Kim",
+                "Taeyoon Kwon",
+                "Jiwan Chung",
+                "Youngjae Yu",
+                "Jinyoung Yeo"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2404.02575"
+        },
+        {
+            "id": 12,
+            "title": "AIOS Compiler: LLM as Interpreter for Natural Language Programming and Flow Programming of AI Agents",
+            "abstract": "Since their inception, programming languages have trended towards greater\nreadability and lower barriers for programmers. Following this trend, natural\nlanguage can be a promising type of programming language that provides great\nflexibility and usability and helps towards the democracy of programming.\nHowever, the inherent vagueness, ambiguity, and verbosity of natural language\npose significant challenges in developing an interpreter that can accurately\nunderstand the programming logic and execute instructions written in natural\nlanguage. Fortunately, recent advancements in Large Language Models (LLMs) have\ndemonstrated remarkable proficiency in interpreting complex natural language.\nInspired by this, we develop a novel system for Code Representation and\nExecution (CoRE), which employs LLM as interpreter to interpret and execute\nnatural language instructions. The proposed system unifies natural language\nprogramming, pseudo-code programming, and flow programming under the same\nrepresentation for constructing language agents, while LLM serves as the\ninterpreter to interpret and execute the agent programs. In this paper, we\nbegin with defining the programming syntax that structures natural language\ninstructions logically. During the execution, we incorporate external memory to\nminimize redundancy. Furthermore, we equip the designed interpreter with the\ncapability to invoke external tools, compensating for the limitations of LLM in\nspecialized domains or when accessing real-time information. This work is\nopen-source at https://github.com/agiresearch/CoRE,\nhttps://github.com/agiresearch/OpenAGI, and\nhttps://github.com/agiresearch/AIOS.",
+            "authors": [
+                "Shuyuan Xu",
+                "Zelong Li",
+                "Kai Mei",
+                "Yongfeng Zhang"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.06907"
+        },
+        {
+            "id": 13,
+            "title": "MuMath-Code: Combining Tool-Use Large Language Models with Multi-perspective Data Augmentation for Mathematical Reasoning",
+            "abstract": "The tool-use Large Language Models (LLMs) that integrate with external Python\ninterpreters have significantly enhanced mathematical reasoning capabilities\nfor open-source LLMs, while tool-free methods chose another track: augmenting\nmath reasoning data. However, a great method to integrate the above two\nresearch paths and combine their advantages remains to be explored. In this\nwork, we firstly include new math questions via multi-perspective data\naugmenting methods and then synthesize code-nested solutions to them. The open\nLLMs (i.e., Llama-2) are finetuned on the augmented dataset to get the\nresulting models, MuMath-Code ($\\mu$-Math-Code). During the inference phase,\nour MuMath-Code generates code and interacts with the external python\ninterpreter to get the execution results. Therefore, MuMath-Code leverages the\nadvantages of both the external tool and data augmentation. To fully leverage\nthe advantages of our augmented data, we propose a two-stage training strategy:\nIn Stage-1, we finetune Llama-2 on pure CoT data to get an intermediate model,\nwhich then is trained on the code-nested data in Stage-2 to get the resulting\nMuMath-Code. Our MuMath-Code-7B achieves 83.8 on GSM8K and 52.4 on MATH, while\nMuMath-Code-70B model achieves new state-of-the-art performance among open\nmethods -- achieving 90.7% on GSM8K and 55.1% on MATH. Extensive experiments\nvalidate the combination of tool use and data augmentation, as well as our\ntwo-stage training strategy. We release the proposed dataset along with the\nassociated code for public use.",
+            "authors": [
+                "Shuo Yin",
+                "Weihao You",
+                "Zhilong Ji",
+                "Guoqiang Zhong",
+                "Jinfeng Bai"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.07551"
+        },
+        {
+            "id": 14,
+            "title": "Learning to Reason via Program Generation, Emulation, and Search",
+            "abstract": "Program synthesis with language models (LMs) has unlocked a large set of\nreasoning abilities; code-tuned LMs have proven adept at generating programs\nthat solve a wide variety of algorithmic symbolic manipulation tasks (e.g. word\nconcatenation). However, not all reasoning tasks are easily expressible as\ncode, e.g. tasks involving commonsense reasoning, moral decision-making, and\nsarcasm understanding. Our goal is to extend an LM's program synthesis skills\nto such tasks and evaluate the results via pseudo-programs, namely Python\nprograms where some leaf function calls are left undefined. To that end, we\npropose, Code Generation and Emulated EXecution (CoGEX). CoGEX works by (1)\ntraining LMs to generate their own pseudo-programs, (2) teaching them to\nemulate their generated program's execution, including those leaf functions,\nallowing the LM's knowledge to fill in the execution gaps; and (3) using them\nto search over many programs to find an optimal one. To adapt the CoGEX model\nto a new task, we introduce a method for performing program search to find a\nsingle program whose pseudo-execution yields optimal performance when applied\nto all the instances of a given dataset. We show that our approach yields large\nimprovements compared to standard in-context learning approaches on a battery\nof tasks, both algorithmic and soft reasoning. This result thus demonstrates\nthat code synthesis can be applied to a much broader class of problems than\npreviously considered. Our released dataset, fine-tuned models, and\nimplementation can be found at \\url{https://github.com/nweir127/CoGEX}.",
+            "authors": [
+                "Nathaniel Weir",
+                "Muhammad Khalifa",
+                "Linlu Qiu",
+                "Orion Weller",
+                "Peter Clark"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.16337"
+        },
+        {
+            "id": 15,
+            "title": "Arithmetic Reasoning with LLM: Prolog Generation & Permutation",
+            "abstract": "Instructing large language models (LLMs) to solve elementary school math\nproblems has shown great success using Chain of Thought (CoT). However, the CoT\napproach relies on an LLM to generate a sequence of arithmetic calculations\nwhich can be prone to cascaded calculation errors. We hypothesize that an LLM\nshould focus on extracting predicates and generating symbolic formulas from the\nmath problem description so that the underlying calculation can be done via an\nexternal code interpreter. We investigate using LLM to generate Prolog programs\nto solve mathematical questions. Experimental results show that our\nProlog-based arithmetic problem-solving outperforms CoT generation in the GSM8K\nbenchmark across three distinct LLMs. In addition, given the insensitive\nordering of predicates and symbolic formulas in Prolog, we propose to permute\nthe ground truth predicates for more robust LLM training via data augmentation.",
+            "authors": [
+                "Xiaocheng Yang",
+                "Bingsen Chen",
+                "Yik-Cheung Tam"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.17893"
+        },
+        {
+            "id": 16,
+            "title": "Can LLMs Reason in the Wild with Programs?",
+            "abstract": "Large Language Models (LLMs) have shown superior capability to solve\nreasoning problems with programs. While being a promising direction, most of\nsuch frameworks are trained and evaluated in settings with a prior knowledge of\ntask requirements. However, as LLMs become more capable, it is necessary to\nassess their reasoning abilities in more realistic scenarios where many\nreal-world problems are open-ended with ambiguous scope, and often require\nmultiple formalisms to solve. To investigate this, we introduce the task of\nreasoning in the wild, where an LLM is tasked to solve a reasoning problem of\nunknown type by identifying the subproblems and their corresponding formalisms,\nand writing a program to solve each subproblem, guided by a tactic. We create a\nlarge tactic-guided trajectory dataset containing detailed solutions to a\ndiverse set of reasoning problems, ranging from well-defined single-form\nreasoning (e.g., math, logic), to ambiguous and hybrid ones (e.g., commonsense,\ncombined math and logic). This allows us to test various aspects of LLMs\nreasoning at the fine-grained level such as the selection and execution of\ntactics, and the tendency to take undesired shortcuts. In experiments, we\nhighlight that existing LLMs fail significantly on problems with ambiguous and\nmixed scope, revealing critical limitations and overfitting issues (e.g.\naccuracy on GSM8K drops by at least 50\\%). We further show the potential of\nfinetuning a local LLM on the tactic-guided trajectories in achieving better\nperformance. Project repo is available at\ngithub.com/gblackout/Reason-in-the-Wild",
+            "authors": [
+                "Yuan Yang",
+                "Siheng Xiong",
+                "Ali Payani",
+                "Ehsan Shareghi",
+                "Faramarz Fekri"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2406.13764"
+        },
+        {
+            "id": 17,
+            "title": "DotaMath: Decomposition of Thought with Code Assistance and Self-correction for Mathematical Reasoning",
+            "abstract": "Large language models (LLMs) have made impressive progress in handling simple\nmath problems, yet they still struggle with more challenging and complex\nmathematical tasks. In this paper, we introduce a series of LLMs that employs\nthe Decomposition of thought with code assistance and self-correction for\nmathematical reasoning, dubbed as DotaMath. DotaMath models tackle complex\nmathematical tasks by decomposing them into simpler logical subtasks,\nleveraging code to solve these subtasks, obtaining fine-grained feedback from\nthe code interpreter, and engaging in self-reflection and correction. By\nannotating diverse interactive tool-use trajectories and employing query\nevolution on GSM8K and MATH datasets, we generate an instruction fine-tuning\ndataset called DotaMathQA with 574K query-response pairs. We train a series of\nbase LLMs using imitation learning on DotaMathQA, resulting in DotaMath models\nthat achieve remarkable performance compared to open-source LLMs across various\nin-domain and out-of-domain benchmarks. Notably, DotaMath-deepseek-7B showcases\nan outstanding performance of 64.8% on the competitive MATH dataset and 86.7%\non GSM8K. Besides, DotaMath-deepseek-7B maintains strong competitiveness on a\nseries of in-domain and out-of-domain benchmarks (Avg. 80.1%). Looking forward,\nwe anticipate that the DotaMath paradigm will open new pathways for addressing\nintricate mathematical problems. Our code is publicly available at\nhttps://github.com/ChengpengLi1003/DotaMath.",
+            "authors": [
+                "Chengpeng Li",
+                "Guanting Dong",
+                "Mingfeng Xue",
+                "Ru Peng",
+                "Xiang Wang",
+                "Dayiheng Liu"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.04078"
+        },
+        {
+            "id": 18,
+            "title": "CIBench: Evaluating Your LLMs with a Code Interpreter Plugin",
+            "abstract": "While LLM-Based agents, which use external tools to solve complex problems,\nhave made significant progress, benchmarking their ability is challenging,\nthereby hindering a clear understanding of their limitations. In this paper, we\npropose an interactive evaluation framework, named CIBench, to comprehensively\nassess LLMs' ability to utilize code interpreters for data science tasks. Our\nevaluation framework includes an evaluation dataset and two evaluation modes.\nThe evaluation dataset is constructed using an LLM-human cooperative approach\nand simulates an authentic workflow by leveraging consecutive and interactive\nIPython sessions. The two evaluation modes assess LLMs' ability with and\nwithout human assistance. We conduct extensive experiments to analyze the\nability of 24 LLMs on CIBench and provide valuable insights for future LLMs in\ncode interpreter utilization.",
+            "authors": [
+                "Songyang Zhang",
+                "Chuyu Zhang",
+                "Yingfan Hu",
+                "Haowen Shen",
+                "Kuikun Liu",
+                "Zerun Ma",
+                "Fengzhe Zhou",
+                "Wenwei Zhang",
+                "Xuming He",
+                "Dahua Lin",
+                "Kai Chen"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.10499"
+        },
+        {
+            "id": 19,
+            "title": "PyBench: Evaluating LLM Agent on various real-world coding tasks",
+            "abstract": "The LLM Agent, equipped with a code interpreter, is capable of automatically\nsolving real-world coding tasks, such as data analysis and image editing.\n  However, existing benchmarks primarily focus on either simplistic tasks, such\nas completing a few lines of code, or on extremely complex and specific tasks\nat the repository level, neither of which are representative of various daily\ncoding tasks.\n  To address this gap, we introduce \\textbf{PyBench}, a benchmark encompassing\nfive main categories of real-world tasks, covering more than 10 types of files.\nGiven a high-level user query and related files, the LLM Agent needs to reason\nand execute Python code via a code interpreter for a few turns before making a\nformal response to fulfill the user's requirements. Successfully addressing\ntasks in PyBench demands a robust understanding of various Python packages,\nsuperior reasoning capabilities, and the ability to incorporate feedback from\nexecuted code. Our evaluations indicate that current open-source LLMs are\nstruggling with these tasks. Hence, we conduct analysis and experiments on four\nkinds of datasets proving that comprehensive abilities are needed for PyBench.\nOur fine-tuned 8B size model: \\textbf{PyLlama3} achieves an exciting\nperformance on PyBench which surpasses many 33B and 70B size models. Our\nBenchmark, Training Dataset, and Model are available at:\n{https://github.com/Mercury7353/PyBench}",
+            "authors": [
+                "Yaolun Zhang",
+                "Yinxu Pan",
+                "Yudong Wang",
+                "Jie Cai"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.16732"
+        },
+        {
+            "id": 20,
+            "title": "AdaCoder: Adaptive Prompt Compression for Programmatic Visual Question Answering",
+            "abstract": "Visual question answering aims to provide responses to natural language\nquestions given visual input. Recently, visual programmatic models (VPMs),\nwhich generate executable programs to answer questions through large language\nmodels (LLMs), have attracted research interest. However, they often require\nlong input prompts to provide the LLM with sufficient API usage details to\ngenerate relevant code. To address this limitation, we propose AdaCoder, an\nadaptive prompt compression framework for VPMs. AdaCoder operates in two\nphases: a compression phase and an inference phase. In the compression phase,\ngiven a preprompt that describes all API definitions in the Python language\nwith example snippets of code, a set of compressed preprompts is generated,\neach depending on a specific question type. In the inference phase, given an\ninput question, AdaCoder predicts the question type and chooses the appropriate\ncorresponding compressed preprompt to generate code to answer the question.\nNotably, AdaCoder employs a single frozen LLM and pre-defined prompts, negating\nthe necessity of additional training and maintaining adaptability across\ndifferent powerful black-box LLMs such as GPT and Claude. In experiments, we\napply AdaCoder to ViperGPT and demonstrate that it reduces token length by\n71.1%, while maintaining or even improving the performance of visual question\nanswering.",
+            "authors": [
+                "Mahiro Ukai",
+                "Shuhei Kurita",
+                "Atsushi Hashimoto",
+                "Yoshitaka Ushiku",
+                "Nakamasa Inoue"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.19410"
+        },
+        {
+            "id": 21,
+            "title": "Pyramid Coder: Hierarchical Code Generator for Compositional Visual Question Answering",
+            "abstract": "Visual question answering (VQA) is the task of providing accurate answers to\nnatural language questions based on visual input. Programmatic VQA (PVQA)\nmodels have been gaining attention recently. These use large language models\n(LLMs) to formulate executable programs that address questions requiring\ncomplex visual reasoning. However, there are challenges in enabling LLMs to\ncomprehend the usage of image processing modules and generate relevant code. To\novercome these challenges, this paper introduces PyramidCoder, a novel\nprompting framework for PVQA models. PyramidCoder consists of three\nhierarchical levels, each serving a distinct purpose: query rephrasing, code\ngeneration, and answer aggregation. Notably, PyramidCoder utilizes a single\nfrozen LLM and pre-defined prompts at each level, eliminating the need for\nadditional training and ensuring flexibility across various LLM architectures.\nCompared to the state-of-the-art PVQA model, our approach improves accuracy by\nat least 0.5% on the GQA dataset, 1.4% on the VQAv2 dataset, and 2.9% on the\nNLVR2 dataset.",
+            "authors": [
+                "Ruoyue Shen",
+                "Nakamasa Inoue",
+                "Koichi Shinoda"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.20563"
+        },
+        {
+            "id": 22,
+            "title": "Code Simulation Challenges for Large Language Models",
+            "abstract": "Many reasoning, planning, and problem-solving tasks share an intrinsic\nalgorithmic nature: correctly simulating each step is a sufficient condition to\nsolve them correctly. This work studies to what extent Large Language Models\n(LLMs) can simulate coding and algorithmic tasks to provide insights into\ngeneral capabilities in such algorithmic reasoning tasks. We introduce\nbenchmarks for straight-line programs, code that contains critical paths, and\napproximate and redundant instructions. We further assess the simulation\ncapabilities of LLMs with sorting algorithms and nested loops and show that a\nroutine's computational complexity directly affects an LLM's ability to\nsimulate its execution. While the most powerful LLMs exhibit relatively strong\nsimulation capabilities, the process is fragile, seems to rely heavily on\npattern recognition, and is affected by memorisation. We propose a novel\noff-the-shelf prompting method, Chain of Simulation (CoSm), which instructs\nLLMs to simulate code execution line by line/follow the computation pattern of\ncompilers. CoSm efficiently helps LLMs reduce memorisation and shallow pattern\nrecognition while improving simulation performance. We consider the success of\nCoSm in code simulation to be inspirational for other general routine\nsimulation reasoning tasks.",
+            "authors": [
+                "Emanuele La Malfa",
+                "Christoph Weinhuber",
+                "Orazio Torre",
+                "Fangru Lin",
+                "Samuele Marro",
+                "Anthony Cohn",
+                "Nigel Shadbolt",
+                "Michael Wooldridge"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2401.09074"
+        },
+        {
+            "id": 23,
+            "title": "CodeMind: A Framework to Challenge Large Language Models for Code Reasoning",
+            "abstract": "Solely relying on test passing to evaluate Large Language Models (LLMs) for\ncode synthesis may result in unfair assessment or promoting models with data\nleakage. As an alternative, we introduce CodeMind, a framework designed to\ngauge the code reasoning abilities of LLMs. CodeMind currently supports three\ncode reasoning tasks: Independent Execution Reasoning (IER), Dependent\nExecution Reasoning (DER), and Specification Reasoning (SR). The first two\nevaluate models to predict the execution output of an arbitrary code or code\nthe model could correctly synthesize. The third one evaluates the extent to\nwhich LLMs implement the specified expected behavior.\n  Our extensive evaluation of nine LLMs across five benchmarks in two different\nprogramming languages using CodeMind shows that LLMs fairly follow control flow\nconstructs and, in general, explain how inputs evolve to output, specifically\nfor simple programs and the ones they can correctly synthesize. However, their\nperformance drops for code with higher complexity, non-trivial logical and\narithmetic operators, non-primitive types, and API calls. Furthermore, we\nobserve that, while correlated, specification reasoning (essential for code\nsynthesis) does not imply execution reasoning (essential for broader\nprogramming tasks such as testing and debugging): ranking LLMs based on test\npassing can be different compared to code reasoning.",
+            "authors": [
+                "Changshu Liu",
+                "Shizhuo Dylan Zhang",
+                "Ali Reza Ibrahimzada",
+                "Reyhaneh Jabbarvand"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2402.09664"
+        },
+        {
+            "id": 24,
+            "title": "Executing Natural Language-Described Algorithms with Large Language Models: An Investigation",
+            "abstract": "Executing computer programs described in natural language has long been a\npursuit of computer science. With the advent of enhanced natural language\nunderstanding capabilities exhibited by large language models (LLMs), the path\ntoward this goal has been illuminated. In this paper, we seek to examine the\ncapacity of present-day LLMs to comprehend and execute algorithms outlined in\nnatural language. We established an algorithm test set sourced from\nIntroduction to Algorithm, a well-known textbook that contains many\nrepresentative widely-used algorithms. To systematically assess LLMs' code\nexecution abilities, we selected 30 algorithms, generated 300 random-sampled\ninstances in total, and evaluated whether popular LLMs can understand and\nexecute these algorithms. Our findings reveal that LLMs, notably GPT-4, can\neffectively execute programs described in natural language, as long as no heavy\nnumeric computation is involved. We believe our findings contribute to\nevaluating LLMs' code execution abilities and would encourage further\ninvestigation and application for the computation power of LLMs.",
+            "authors": [
+                "Xin Zheng",
+                "Qiming Zhu",
+                "Hongyu Lin",
+                "Yaojie Lu",
+                "Xianpei Han",
+                "Le Sun"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.00795"
+        },
+        {
+            "id": 25,
+            "title": "Can Language Models Pretend Solvers? Logic Code Simulation with LLMs",
+            "abstract": "Transformer-based large language models (LLMs) have demonstrated significant\npotential in addressing logic problems. capitalizing on the great capabilities\nof LLMs for code-related activities, several frameworks leveraging logical\nsolvers for logic reasoning have been proposed recently. While existing\nresearch predominantly focuses on viewing LLMs as natural language logic\nsolvers or translators, their roles as logic code interpreters and executors\nhave received limited attention. This study delves into a novel aspect, namely\nlogic code simulation, which forces LLMs to emulate logical solvers in\npredicting the results of logical programs. To further investigate this novel\ntask, we formulate our three research questions: Can LLMs efficiently simulate\nthe outputs of logic codes? What strength arises along with logic code\nsimulation? And what pitfalls? To address these inquiries, we curate three\nnovel datasets tailored for the logic code simulation task and undertake\nthorough experiments to establish the baseline performance of LLMs in code\nsimulation. Subsequently, we introduce a pioneering LLM-based code simulation\ntechnique, Dual Chains of Logic (DCoL). This technique advocates a dual-path\nthinking approach for LLMs, which has demonstrated state-of-the-art performance\ncompared to other LLM prompt strategies, achieving a notable improvement in\naccuracy by 7.06% with GPT-4-Turbo.",
+            "authors": [
+                "Minyu Chen",
+                "Guoqiang Li",
+                "Ling-I Wu",
+                "Ruibang Liu",
+                "Yuxin Su",
+                "Xi Chang",
+                "Jianxin Xue"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.16097"
+        },
+        {
+            "id": 26,
+            "title": "Reasoning Runtime Behavior of a Program with LLM: How Far Are We?",
+            "abstract": "Large language models for code (i.e., code LLMs) have shown strong code\nunderstanding and generation capabilities. To evaluate the capabilities of code\nLLMs in various aspects, many benchmarks have been proposed (e.g., HumanEval\nand ClassEval). Code reasoning is one of the most essential abilities of code\nLLMs, but existing benchmarks for code reasoning are not sufficient. Typically,\nthey focus on predicting the input and output of a program, ignoring the\nevaluation of the intermediate behavior during program execution, as well as\nthe logical consistency (e.g., the model should not give the correct output if\nthe prediction of execution path is wrong) when performing the reasoning. To\naddress these problems, in this paper, we propose a framework, namely REval,\nfor evaluating code reasoning abilities and consistency of code LLMs with\nprogram execution. We utilize existing code benchmarks and adapt them to new\nbenchmarks within our framework. A large-scale empirical study is conducted and\nmost LLMs show unsatisfactory performance on both Runtime Behavior Reasoning\n(i.e., an average accuracy of 44.4%) and Incremental Consistency Evaluation\n(i.e., an average IC score of 10.3). Evaluation results of current code LLMs\nreflect the urgent need for the community to strengthen the code reasoning\ncapability of code LLMs. Our code, data, and \\newname leaderboard are available\nat https://r-eval.github.io.",
+            "authors": [
+                "Junkai Chen",
+                "Zhiyuan Pan",
+                "Xing Hu",
+                "Zhenhao Li",
+                "Ge Li",
+                "Xin Xia"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.16437"
+        },
+        {
+            "id": 27,
+            "title": "NExT: Teaching Large Language Models to Reason about Code Execution",
+            "abstract": "A fundamental skill among human developers is the ability to understand and\nreason about program execution. As an example, a programmer can mentally\nsimulate code execution in natural language to debug and repair code (aka.\nrubber duck debugging). However, large language models (LLMs) of code are\ntypically trained on the surface textual form of programs, thus may lack a\nsemantic understanding of how programs execute at run-time. To address this\nissue, we propose NExT, a method to teach LLMs to inspect the execution traces\nof programs (variable states of executed lines) and reason about their run-time\nbehavior through chain-of-thought (CoT) rationales. Specifically, NExT uses\nself-training to bootstrap a synthetic training set of execution-aware\nrationales that lead to correct task solutions (e.g., fixed programs) without\nlaborious manual annotation. Experiments on program repair tasks based on MBPP\nand HumanEval demonstrate that NExT improves the fix rate of a PaLM 2 model, by\n26.1% and 14.3% absolute, respectively, with significantly improved rationale\nquality as verified by automated metrics and human raters. Our model can also\ngeneralize to scenarios where program traces are absent at test-time.",
+            "authors": [
+                "Ansong Ni",
+                "Miltiadis Allamanis",
+                "Arman Cohan",
+                "Yinlin Deng",
+                "Kensen Shi",
+                "Charles Sutton",
+                "Pengcheng Yin"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2404.14662"
+        },
+        {
+            "id": 28,
+            "title": "SelfPiCo: Self-Guided Partial Code Execution with LLMs",
+            "abstract": "Code executability plays a vital role in software debugging and testing\n(e.g., detecting runtime exceptions or assertion violations). However, code\nexecution, especially partial or arbitrary code execution, is a non-trivial\ntask due to missing definitions and complex third-party dependencies. To make\npartial code (such as code snippets posted on the web or code fragments deep\ninside complex software projects) executable, the existing study has proposed a\nmachine learning model to predict the undefined element types and inject the\npre-defined dummy values into execution. However, the performance of their tool\nis limited due to its simply designed dummy values and the inability to\ncontinue learning. In this paper, we design and implement a novel framework,\nnamed SelfPiCo (Self Guided Partial Code Executor), to dynamically guide\npartial code execution by incorporating the open-source LLM (i.e., Code Llama)\nwithin an interactive loop. Particularly, SelfPiCo leverages few-shot\nin-context learning and chain-of-thought reasoning to elicit human knowledge\nand logical reasoning based on fine-tuning the Code Llama model. SelfPiCo\ncontinuously learns from code execution results and refines its predictions\nstep after step. Our evaluations demonstrate that SelfPiCo can execute 72.7%\nand 83.3% of all lines in the open-source code and Stack Overflow snippets,\noutperforming the most recent state-of-the-art Lexecutor by 37.9% and 33.5%,\nrespectively. Moreover, SelfPiCo successfully detected 18 and 33 runtime type\nerror issues by executing the partial code from eight GitHub software projects\nand 43 Stack Overflow posts, demonstrating the practical usage and potential\napplication of our framework in practice.",
+            "authors": [
+                "Zhipeng Xue",
+                "Zhipeng Gao",
+                "Shaohua Wang",
+                "Xing Hu",
+                "Xin Xia",
+                "Shanping Li"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.16974"
+        },
+        {
+            "id": 29,
+            "title": "Self-collaboration Code Generation via ChatGPT",
+            "abstract": "Although Large Language Models (LLMs) have demonstrated remarkable\ncode-generation ability, they still struggle with complex tasks. In real-world\nsoftware development, humans usually tackle complex tasks through collaborative\nteamwork, a strategy that significantly controls development complexity and\nenhances software quality. Inspired by this, we present a self-collaboration\nframework for code generation employing LLMs, exemplified by ChatGPT.\nSpecifically, through role instructions, 1) Multiple LLM agents act as distinct\n`experts', each responsible for a specific subtask within a complex task; 2)\nSpecify the way to collaborate and interact, so that different roles form a\nvirtual team to facilitate each other's work, ultimately the virtual team\naddresses code generation tasks collaboratively without the need for human\nintervention. To effectively organize and manage this virtual team, we\nincorporate software-development methodology into the framework. Thus, we\nassemble an elementary team consisting of three LLM roles (i.e., analyst,\ncoder, and tester) responsible for software development's analysis, coding, and\ntesting stages. We conduct comprehensive experiments on various code-generation\nbenchmarks. Experimental results indicate that self-collaboration code\ngeneration relatively improves 29.9%-47.1% Pass@1 compared to the base LLM\nagent. Moreover, we showcase that self-collaboration could potentially enable\nLLMs to efficiently handle complex repository-level tasks that are not readily\nsolved by the single LLM agent.",
+            "authors": [
+                "Yihong Dong",
+                "Xue Jiang",
+                "Zhi Jin",
+                "Ge Li"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2304.07590"
+        },
+        {
+            "id": 30,
+            "title": "ChatDev: Communicative Agents for Software Development",
+            "abstract": "Software development is a complex task that necessitates cooperation among\nmultiple members with diverse skills. Numerous studies used deep learning to\nimprove specific phases in a waterfall model, such as design, coding, and\ntesting. However, the deep learning model in each phase requires unique\ndesigns, leading to technical inconsistencies across various phases, which\nresults in a fragmented and ineffective development process. In this paper, we\nintroduce ChatDev, a chat-powered software development framework in which\nspecialized agents driven by large language models (LLMs) are guided in what to\ncommunicate (via chat chain) and how to communicate (via communicative\ndehallucination). These agents actively contribute to the design, coding, and\ntesting phases through unified language-based communication, with solutions\nderived from their multi-turn dialogues. We found their utilization of natural\nlanguage is advantageous for system design, and communicating in programming\nlanguage proves helpful in debugging. This paradigm demonstrates how linguistic\ncommunication facilitates multi-agent collaboration, establishing language as a\nunifying bridge for autonomous task-solving among LLM agents. The code and data\nare available at https://github.com/OpenBMB/ChatDev.",
+            "authors": [
+                "Chen Qian",
+                "Wei Liu",
+                "Hongzhang Liu",
+                "Nuo Chen",
+                "Yufan Dang",
+                "Jiahao Li",
+                "Cheng Yang",
+                "Weize Chen",
+                "Yusheng Su",
+                "Xin Cong",
+                "Juyuan Xu",
+                "Dahai Li",
+                "Zhiyuan Liu",
+                "Maosong Sun"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2307.07924"
+        },
+        {
+            "id": 31,
+            "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+            "abstract": "Remarkable progress has been made on automated problem solving through\nsocieties of agents based on large language models (LLMs). Existing LLM-based\nmulti-agent systems can already solve simple dialogue tasks. Solutions to more\ncomplex tasks, however, are complicated through logic inconsistencies due to\ncascading hallucinations caused by naively chaining LLMs. Here we introduce\nMetaGPT, an innovative meta-programming framework incorporating efficient human\nworkflows into LLM-based multi-agent collaborations. MetaGPT encodes\nStandardized Operating Procedures (SOPs) into prompt sequences for more\nstreamlined workflows, thus allowing agents with human-like domain expertise to\nverify intermediate results and reduce errors. MetaGPT utilizes an assembly\nline paradigm to assign diverse roles to various agents, efficiently breaking\ndown complex tasks into subtasks involving many agents working together. On\ncollaborative software engineering benchmarks, MetaGPT generates more coherent\nsolutions than previous chat-based multi-agent systems. Our project can be\nfound at https://github.com/geekan/MetaGPT",
+            "authors": [
+                "Sirui Hong",
+                "Mingchen Zhuge",
+                "Jonathan Chen",
+                "Xiawu Zheng",
+                "Yuheng Cheng",
+                "Ceyao Zhang",
+                "Jinlin Wang",
+                "Zili Wang",
+                "Steven Ka Shing Yau",
+                "Zijuan Lin",
+                "Liyang Zhou",
+                "Chenyu Ran",
+                "Lingfeng Xiao",
+                "Chenglin Wu",
+                "Jürgen Schmidhuber"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2308.00352"
+        },
+        {
+            "id": 32,
+            "title": "CodeChain: Towards Modular Code Generation Through Chain of Self-revisions with Representative Sub-modules",
+            "abstract": "Large Language Models (LLMs) have already become quite proficient at solving\nsimpler programming tasks like those in HumanEval or MBPP benchmarks. However,\nsolving more complex and competitive programming tasks is still quite\nchallenging for these models - possibly due to their tendency to generate\nsolutions as monolithic code blocks instead of decomposing them into logical\nsub-tasks and sub-modules. On the other hand, experienced programmers\ninstinctively write modularized code with abstraction for solving complex\ntasks, often reusing previously developed modules. To address this gap, we\npropose CodeChain, a novel framework for inference that elicits modularized\ncode generation through a chain of self-revisions, each being guided by some\nrepresentative sub-modules generated in previous iterations. Concretely,\nCodeChain first instructs the LLM to generate modularized codes through\nchain-of-thought prompting. Then it applies a chain of self-revisions by\niterating the two steps: 1) extracting and clustering the generated sub-modules\nand selecting the cluster representatives as the more generic and re-usable\nimplementations, and 2) augmenting the original chain-of-thought prompt with\nthese selected module-implementations and instructing the LLM to re-generate\nnew modularized solutions. We find that by naturally encouraging the LLM to\nreuse the previously developed and verified sub-modules, CodeChain can\nsignificantly boost both modularity as well as correctness of the generated\nsolutions, achieving relative pass@1 improvements of 35% on APPS and 76% on\nCodeContests. It is shown to be effective on both OpenAI LLMs as well as\nopen-sourced LLMs like WizardCoder. We also conduct comprehensive ablation\nstudies with different methods of prompting, number of clusters, model sizes,\nprogram qualities, etc., to provide useful insights that underpin CodeChain's\nsuccess.",
+            "authors": [
+                "Hung Le",
+                "Hailin Chen",
+                "Amrita Saha",
+                "Akash Gokul",
+                "Doyen Sahoo",
+                "Shafiq Joty"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2310.08992"
+        },
+        {
+            "id": 33,
+            "title": "CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+            "abstract": "Large Language Models (LLMs) have shown promise in automated code generation\nbut typically excel only in simpler tasks such as generating standalone code\nunits. Real-world software development, however, often involves complex code\nrepositories (named repo) with complex dependencies and extensive\ndocumentation. To fill this gap, our research pivots towards evaluating LLMs in\na more realistic setting -- real-world repo-level code generation. We introduce\nCodeAgentBench, a manually curated benchmark for repo-level code generation.\nThis benchmark comprises five high-quality Python projects, encompassing a\ntotal of 101 samples. We assess nine leading LLMs on repo-level tasks and\nobserve a decline in their performance. To tackle this, we present CodeAgent, a\nnovel LLM-based agent framework that employs external tools for effective\nrepo-level code generation. CodeAgent integrates five programming tools,\nenabling interaction with software artifacts for information retrieval, code\nsymbol navigation, and code testing. We implement four agent strategies to\noptimize these tools' usage. Our experiments on CodeAgentBench show that\nCodeAgent enhances LLM performance significantly, with improvements ranging\nfrom 18.1\\% to 250\\%. Further tests on the HumanEval benchmark confirm\nCodeAgent's adaptability and efficacy across various code generation tasks.\nNotably, CodeAgent outperforms commercial products like Github Copilot,\nshowcasing superior accuracy and efficiency. These results demonstrate\nCodeAgent's robust capabilities in code generation, highlighting its potential\nfor real-world repo-level coding challenges.",
+            "authors": [
+                "Kechi Zhang",
+                "Jia Li",
+                "Ge Li",
+                "Xianjie Shi",
+                "Zhi Jin"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2401.07339"
+        },
+        {
+            "id": 34,
+            "title": "CoCoST: Automatic Complex Code Generation with Online Searching and Correctness Testing",
+            "abstract": "Large Language Models have revolutionized code generation ability by\nconverting natural language descriptions into executable code. However,\ngenerating complex code within real-world scenarios remains challenging due to\nintricate structures, subtle bugs, understanding of advanced data types, and\nlack of supplementary contents. To address these challenges, we introduce the\nCoCoST framework, which enhances complex code generation by online searching\nfor more information with planned queries and correctness testing for code\nrefinement. Moreover, CoCoST serializes the complex inputs and outputs to\nimprove comprehension and generates test cases to ensure the adaptability for\nreal-world applications. CoCoST is validated through rigorous experiments on\nthe DS-1000 and ClassEval datasets. Experimental results show that CoCoST\nsubstantially improves the quality of complex code generation, highlighting its\npotential to enhance the practicality of LLMs in generating complex code.",
+            "authors": [
+                "Xinyi He",
+                "Jiaru Zou",
+                "Yun Lin",
+                "Mengyu Zhou",
+                "Shi Han",
+                "Zejian Yuan",
+                "Dongmei Zhang"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.13583"
+        },
+        {
+            "id": 35,
+            "title": "When LLM-based Code Generation Meets the Software Development Process",
+            "abstract": "Software process models play a pivotal role in fostering collaboration and\ncommunication within software teams, enabling them to tackle intricate\ndevelopment tasks effectively. This paper introduces LCG, a code generation\nframework inspired by established software engineering practices. LCG leverages\nmultiple Large Language Model (LLM) agents to emulate various software process\nmodels, namely LCGWaterfall, LCGTDD, and LCGScrum. Each model assigns LLM\nagents specific roles such as requirement engineer, architect, developer,\ntester, and scrum master, mirroring typical development activities and\ncommunication patterns. Through collaborative efforts utilizing\nchain-of-thought and prompt composition techniques, the agents continuously\nrefine themselves to enhance code quality. Utilizing GPT3.5 as the underlying\nLLM and baseline (GPT), we evaluate LCG across four code generation benchmarks:\nHumanEval, HumanEval-ET, MBPP, and MBPP-ET. Results indicate LCGScrum\noutperforms other models, achieving Pass@1 scores of 75.2, 65.5, 82.5, and 56.7\nin HumanEval, HumanEval-ET, MBPP, and MBPP-ET, respectively - an average 15%\nimprovement over GPT. Analysis reveals distinct impacts of development\nactivities on generated code, with design and code reviews contributing to\nenhanced exception handling, while design, testing, and code reviews mitigate\ncode smells. Furthermore, temperature values exhibit negligible influence on\nPass@1 across all models. However, variations in Pass@1 are notable for\ndifferent GPT3.5 model versions, ranging from 5 to over 60 in HumanEval,\nhighlighting the stability of LCG across model versions. This stability\nunderscores the importance of adopting software process models to bolster the\nquality and consistency of LLM-generated code.",
+            "authors": [
+                "Feng Lin",
+                "Dong Jae Kim",
+                "Tse-Husn",
+                "Chen"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.15852"
+        },
+        {
+            "id": 36,
+            "title": "RepairAgent: An Autonomous, LLM-Based Agent for Program Repair",
+            "abstract": "Automated program repair has emerged as a powerful technique to mitigate the\nimpact of software bugs on system reliability and user experience. This paper\nintroduces RepairAgent, the first work to address the program repair challenge\nthrough an autonomous agent based on a large language model (LLM). Unlike\nexisting deep learning-based approaches, which prompt a model with a fixed\nprompt or in a fixed feedback loop, our work treats the LLM as an agent capable\nof autonomously planning and executing actions to fix bugs by invoking suitable\ntools. RepairAgent freely interleaves gathering information about the bug,\ngathering repair ingredients, and validating fixes, while deciding which tools\nto invoke based on the gathered information and feedback from previous fix\nattempts. Key contributions that enable RepairAgent include a set of tools that\nare useful for program repair, a dynamically updated prompt format that allows\nthe LLM to interact with these tools, and a finite state machine that guides\nthe agent in invoking the tools. Our evaluation on the popular Defects4J\ndataset demonstrates RepairAgent's effectiveness in autonomously repairing 164\nbugs, including 39 bugs not fixed by prior techniques. Interacting with the LLM\nimposes an average cost of 270,000 tokens per bug, which, under the current\npricing of OpenAI's GPT-3.5 model, translates to 14 cents of USD per bug. To\nthe best of our knowledge, this work is the first to present an autonomous,\nLLM-based agent for program repair, paving the way for future agent-based\ntechniques in software engineering.",
+            "authors": [
+                "Islem Bouzenia",
+                "Premkumar Devanbu",
+                "Michael Pradel"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.17134"
+        },
+        {
+            "id": 37,
+            "title": "MAGIS: LLM-Based Multi-Agent Framework for GitHub Issue Resolution",
+            "abstract": "In software development, resolving the emergent issues within GitHub\nrepositories is a complex challenge that involves not only the incorporation of\nnew code but also the maintenance of existing code. Large Language Models\n(LLMs) have shown promise in code generation but face difficulties in resolving\nGithub issues, particularly at the repository level. To overcome this\nchallenge, we empirically study the reason why LLMs fail to resolve GitHub\nissues and analyze the major factors. Motivated by the empirical findings, we\npropose a novel LLM-based Multi-Agent framework for GitHub Issue reSolution,\nMAGIS, consisting of four agents customized for software evolution: Manager,\nRepository Custodian, Developer, and Quality Assurance Engineer agents. This\nframework leverages the collaboration of various agents in the planning and\ncoding process to unlock the potential of LLMs to resolve GitHub issues. In\nexperiments, we employ the SWE-bench benchmark to compare MAGIS with popular\nLLMs, including GPT-3.5, GPT-4, and Claude-2. MAGIS can resolve 13.94% GitHub\nissues, significantly outperforming the baselines. Specifically, MAGIS achieves\nan eight-fold increase in resolved ratio over the direct application of GPT-4,\nthe advanced LLM.",
+            "authors": [
+                "Wei Tao",
+                "Yucheng Zhou",
+                "Yanlin Wang",
+                "Wenqiang Zhang",
+                "Hongyu Zhang",
+                "Yu Cheng"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.17927"
+        },
+        {
+            "id": 38,
+            "title": "Self-Organized Agents: A LLM Multi-Agent Framework toward Ultra Large-Scale Code Generation and Optimization",
+            "abstract": "Recent advancements in automatic code generation using large language model\n(LLM) agent have brought us closer to the future of automated software\ndevelopment. However, existing single-agent approaches face limitations in\ngenerating and improving large-scale, complex codebases due to constraints in\ncontext length. To tackle this challenge, we propose Self-Organized multi-Agent\nframework (SoA), a novel multi-agent framework that enables the scalable and\nefficient generation and optimization of large-scale code. In SoA,\nself-organized agents operate independently to generate and modify code\ncomponents while seamlessly collaborating to construct the overall codebase. A\nkey feature of our framework is the automatic multiplication of agents based on\nproblem complexity, allowing for dynamic scalability. This enables the overall\ncode volume to be increased indefinitely according to the number of agents,\nwhile the amount of code managed by each agent remains constant. We evaluate\nSoA on the HumanEval benchmark and demonstrate that, compared to a single-agent\nsystem, each agent in SoA handles significantly less code, yet the overall\ngenerated code is substantially greater. Moreover, SoA surpasses the powerful\nsingle-agent baseline by 5% in terms of Pass@1 accuracy.",
+            "authors": [
+                "Yoichi Ishibashi",
+                "Yoshimasa Nishimura"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2404.02183"
+        },
+        {
+            "id": 39,
+            "title": "AutoCodeRover: Autonomous Program Improvement",
+            "abstract": "Researchers have made significant progress in automating the software\ndevelopment process in the past decades. Recent progress in Large Language\nModels (LLMs) has significantly impacted the development process, where\ndevelopers can use LLM-based programming assistants to achieve automated\ncoding. Nevertheless, software engineering involves the process of program\nimprovement apart from coding, specifically to enable software maintenance\n(e.g. bug fixing) and software evolution (e.g. feature additions). In this\npaper, we propose an automated approach for solving GitHub issues to\nautonomously achieve program improvement. In our approach called AutoCodeRover,\nLLMs are combined with sophisticated code search capabilities, ultimately\nleading to a program modification or patch. In contrast to recent LLM agent\napproaches from AI researchers and practitioners, our outlook is more software\nengineering oriented. We work on a program representation (abstract syntax\ntree) as opposed to viewing a software project as a mere collection of files.\nOur code search exploits the program structure in the form of classes/methods\nto enhance LLM's understanding of the issue's root cause, and effectively\nretrieve a context via iterative search. The use of spectrum-based fault\nlocalization using tests, further sharpens the context, as long as a test-suite\nis available. Experiments on SWE-bench-lite (300 real-life GitHub issues) show\nincreased efficacy in solving GitHub issues (19% on SWE-bench-lite), which is\nhigher than the efficacy of the recently reported SWE-agent. In addition,\nAutoCodeRover achieved this efficacy with significantly lower cost (on average,\n$0.43 USD), compared to other baselines. We posit that our workflow enables\nautonomous software engineering, where, in future, auto-generated code from\nLLMs can be autonomously improved.",
+            "authors": [
+                "Yuntong Zhang",
+                "Haifeng Ruan",
+                "Zhiyu Fan",
+                "Abhik Roychoudhury"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2404.05427"
+        },
+        {
+            "id": 40,
+            "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+            "abstract": "Language model (LM) agents are increasingly being used to automate\ncomplicated tasks in digital environments. Just as humans benefit from powerful\nsoftware applications, such as integrated development environments, for complex\ntasks like software engineering, we posit that LM agents represent a new\ncategory of end users with their own needs and abilities, and would benefit\nfrom specially-built interfaces to the software they use. We investigate how\ninterface design affects the performance of language model agents. As a result\nof this exploration, we introduce SWE-agent: a system that facilitates LM\nagents to autonomously use computers to solve software engineering tasks.\nSWE-agent's custom agent-computer interface (ACI) significantly enhances an\nagent's ability to create and edit code files, navigate entire repositories,\nand execute tests and other programs. We evaluate SWE-agent on SWE-bench and\nHumanEvalFix, achieving state-of-the-art performance on both with a pass@1 rate\nof 12.5% and 87.7%, respectively, far exceeding the previous state-of-the-art\nachieved with non-interactive LMs. Finally, we provide insight on how the\ndesign of the ACI can impact agents' behavior and performance.",
+            "authors": [
+                "John Yang",
+                "Carlos E. Jimenez",
+                "Alexander Wettig",
+                "Kilian Lieret",
+                "Shunyu Yao",
+                "Karthik Narasimhan",
+                "Ofir Press"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.15793"
+        },
+        {
+            "id": 41,
+            "title": "MapCoder: Multi-Agent Code Generation for Competitive Problem Solving",
+            "abstract": "Code synthesis, which requires a deep understanding of complex natural\nlanguage problem descriptions, generation of code instructions for complex\nalgorithms and data structures, and the successful execution of comprehensive\nunit tests, presents a significant challenge. While large language models\n(LLMs) demonstrate impressive proficiency in natural language processing, their\nperformance in code generation tasks remains limited. In this paper, we\nintroduce a new approach to code generation tasks leveraging multi-agent\nprompting that uniquely replicates the full cycle of program synthesis as\nobserved in human developers. Our framework, MapCoder, consists of four LLM\nagents specifically designed to emulate the stages of this cycle: recalling\nrelevant examples, planning, code generation, and debugging. After conducting\nthorough experiments, with multiple LLM ablations and analyses across eight\nchallenging competitive problem-solving and program synthesis benchmarks,\nMapCoder showcases remarkable code generation capabilities, achieving new\nstate-of-the-art results (pass@1) on HumanEval (93.9%), MBPP (83.1%), APPS\n(22.0%), CodeContests (28.5%), and xCodeEval (45.3%). Moreover, our method\nconsistently delivers superior performance across various programming languages\nand varying problem difficulties. We open-source our framework at\nhttps://github.com/Md-Ashraful-Pramanik/MapCoder.",
+            "authors": [
+                "Md. Ashraful Islam",
+                "Mohammed Eunus Ali",
+                "Md Rizwan Parvez"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.11403"
+        },
+        {
+            "id": 42,
+            "title": "Fight Fire with Fire: How Much Can We Trust ChatGPT on Source Code-Related Tasks?",
+            "abstract": "With the increasing utilization of large language models such as ChatGPT\nduring software development, it has become crucial to verify the quality of\ncode content it generates. Recent studies proposed utilizing ChatGPT as both a\ndeveloper and tester for multi-agent collaborative software development. The\nmulti-agent collaboration empowers ChatGPT to produce test reports for its\ngenerated code, enabling it to self-verify the code content and fix bugs based\non these reports. However, these studies did not assess the effectiveness of\nthe generated test reports in validating the code. Therefore, we conduct a\ncomprehensive empirical investigation to evaluate ChatGPT's self-verification\ncapability in code generation, code completion, and program repair. We request\nChatGPT to (1) generate correct code and then self-verify its correctness; (2)\ncomplete code without vulnerabilities and then self-verify for the presence of\nvulnerabilities; and (3) repair buggy code and then self-verify whether the\nbugs are resolved. Our findings on two code generation datasets, one code\ncompletion dataset, and two program repair datasets reveal the following\nobservations: (1) ChatGPT often erroneously predicts its generated incorrect\ncode as correct. (2) The self-contradictory hallucinations in ChatGPT's\nbehavior arise. (3) The self-verification capability of ChatGPT can be enhanced\nby asking the guiding question, which queries whether ChatGPT agrees with\nassertions about incorrectly generated or repaired code and vulnerabilities in\ncompleted code. (4) Using test reports generated by ChatGPT can identify more\nvulnerabilities in completed code, but the explanations for incorrectly\ngenerated code and failed repairs are mostly inaccurate in the test reports.\nBased on these findings, we provide implications for further research or\ndevelopment using ChatGPT.",
+            "authors": [
+                "Xiao Yu",
+                "Lei Liu",
+                "Xing Hu",
+                "Jacky Wai Keung",
+                "Jin Liu",
+                "Xin Xia"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.12641"
+        },
+        {
+            "id": 43,
+            "title": "Divide-and-Conquer Meets Consensus: Unleashing the Power of Functions in Code Generation",
+            "abstract": "Despite recent progress made by large language models in code generation,\nthey still struggle with programs that meet complex requirements. Recent work\nutilizes plan-and-solve decomposition to decrease the complexity and leverage\nself-tests to refine the generated program. Yet, planning deep-inside\nrequirements in advance can be challenging, and the tests need to be accurate\nto accomplish self-improvement. To this end, we propose FunCoder, a code\ngeneration framework incorporating the divide-and-conquer strategy with\nfunctional consensus. Specifically, FunCoder recursively branches off\nsub-functions as smaller goals during code generation, represented by a tree\nhierarchy. These sub-functions are then composited to attain more complex\nobjectives. Additionally, we designate functions via a consensus formed by\nidentifying similarities in program behavior, mitigating error propagation.\nFunCoder outperforms state-of-the-art methods by +9.8% on average in HumanEval,\nMBPP, xCodeEval and MATH with GPT-3.5 and GPT-4. Moreover, our method\ndemonstrates superiority on smaller models: With FunCoder, StableCode-3b\nsurpasses GPT-3.5 by +18.6% and achieves 97.7% of GPT-4's performance on\nHumanEval. Further analysis reveals that our proposed dynamic function\ndecomposition is capable of handling complex requirements, and the functional\nconsensus prevails over self-testing in correctness evaluation.",
+            "authors": [
+                "Jingchang Chen",
+                "Hongxuan Tang",
+                "Zheng Chu",
+                "Qianglong Chen",
+                "Zekun Wang",
+                "Ming Liu",
+                "Bing Qin"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.20092"
+        },
+        {
+            "id": 44,
+            "title": "Multi-Agent Software Development through Cross-Team Collaboration",
+            "abstract": "The latest breakthroughs in Large Language Models (LLMs), eg., ChatDev, have\ncatalyzed profound transformations, particularly through multi-agent\ncollaboration for software development. LLM agents can collaborate in teams\nlike humans, and follow the waterfall model to sequentially work on\nrequirements analysis, development, review, testing, and other phases to\nperform autonomous software generation. However, for an agent team, each phase\nin a single development process yields only one possible outcome. This results\nin the completion of only one development chain, thereby losing the opportunity\nto explore multiple potential decision paths within the solution space.\nConsequently, this may lead to obtaining suboptimal results. To address this\nchallenge, we introduce Cross-Team Collaboration (CTC), a scalable multi-team\nframework that enables orchestrated teams to jointly propose various decisions\nand communicate with their insights in a cross-team collaboration environment\nfor superior content generation. Experimental results in software development\nreveal a notable increase in quality compared to state-of-the-art baselines,\nunderscoring the efficacy of our framework. The significant improvements in\nstory generation demonstrate the promising generalization ability of our\nframework across various domains. We anticipate that our work will guide LLM\nagents towards a cross-team paradigm and contribute to their significant growth\nin but not limited to software development. The code and data will be available\nat https://github.com/OpenBMB/ChatDev.",
+            "authors": [
+                "Zhuoyun Du",
+                "Chen Qian",
+                "Wei Liu",
+                "Zihao Xie",
+                "Yifei Wang",
+                "Yufan Dang",
+                "Weize Chen",
+                "Cheng Yang"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2406.08979"
+        },
+        {
+            "id": 45,
+            "title": "MASAI: Modular Architecture for Software-engineering AI Agents",
+            "abstract": "A common method to solve complex problems in software engineering, is to\ndivide the problem into multiple sub-problems. Inspired by this, we propose a\nModular Architecture for Software-engineering AI (MASAI) agents, where\ndifferent LLM-powered sub-agents are instantiated with well-defined objectives\nand strategies tuned to achieve those objectives. Our modular architecture\noffers several advantages: (1) employing and tuning different problem-solving\nstrategies across sub-agents, (2) enabling sub-agents to gather information\nfrom different sources scattered throughout a repository, and (3) avoiding\nunnecessarily long trajectories which inflate costs and add extraneous context.\nMASAI enabled us to achieve the highest performance (28.33% resolution rate) on\nthe popular and highly challenging SWE-bench Lite dataset consisting of 300\nGitHub issues from 11 Python repositories. We conduct a comprehensive\nevaluation of MASAI relative to other agentic methods and analyze the effects\nof our design decisions and their contribution to the success of MASAI.",
+            "authors": [
+                "Daman Arora",
+                "Atharv Sonwane",
+                "Nalin Wadhwa",
+                "Abhav Mehrotra",
+                "Saiteja Utpala",
+                "Ramakrishna Bairi",
+                "Aditya Kanade",
+                "Nagarajan Natarajan"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2406.11638"
+        },
+        {
+            "id": 46,
+            "title": "AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology",
+            "abstract": "Software agents have emerged as promising tools for addressing complex\nsoftware engineering tasks. Existing works, on the other hand, frequently\noversimplify software development workflows, despite the fact that such\nworkflows are typically more complex in the real world. Thus, we propose\nAgileCoder, a multi agent system that integrates Agile Methodology (AM) into\nthe framework. This system assigns specific AM roles - such as Product Manager,\nDeveloper, and Tester to different agents, who then collaboratively develop\nsoftware based on user inputs. AgileCoder enhances development efficiency by\norganizing work into sprints, focusing on incrementally developing software\nthrough sprints. Additionally, we introduce Dynamic Code Graph Generator, a\nmodule that creates a Code Dependency Graph dynamically as updates are made to\nthe codebase. This allows agents to better comprehend the codebase, leading to\nmore precise code generation and modifications throughout the software\ndevelopment process. AgileCoder surpasses existing benchmarks, like ChatDev and\nMetaGPT, establishing a new standard and showcasing the capabilities of multi\nagent systems in advanced software engineering environments.",
+            "authors": [
+                "Minh Huynh Nguyen",
+                "Thang Phan Chau",
+                "Phong X. Nguyen",
+                "Nghi D. Q. Bui"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2406.11912"
+        },
+        {
+            "id": 47,
+            "title": "CodeNav: Beyond tool-use to using real-world codebases with LLM agents",
+            "abstract": "We present CodeNav, an LLM agent that navigates and leverages previously\nunseen code repositories to solve user queries. In contrast to tool-use LLM\nagents that require ``registration'' of all relevant tools via manual\ndescriptions within the LLM context, CodeNav automatically indexes and searches\nover code blocks in the target codebase, finds relevant code snippets, imports\nthem, and uses them to iteratively generate a solution with execution feedback.\nTo highlight the core-capabilities of CodeNav, we first showcase three case\nstudies where we use CodeNav for solving complex user queries using three\ndiverse codebases. Next, on three benchmarks, we quantitatively compare the\neffectiveness of code-use (which only has access to the target codebase) to\ntool-use (which has privileged access to all tool names and descriptions).\nFinally, we study the effect of varying kinds of tool and library descriptions\non code-use performance, as well as investigate the advantage of the agent\nseeing source code as opposed to natural descriptions of code. All code will be\nmade open source under a permissive license.",
+            "authors": [
+                "Tanmay Gupta",
+                "Luca Weihs",
+                "Aniruddha Kembhavi"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2406.12276"
+        },
+        {
+            "id": 48,
+            "title": "INDICT: Code Generation with Internal Dialogues of Critiques for Both Security and Helpfulness",
+            "abstract": "Large language models (LLMs) for code are typically trained to align with\nnatural language instructions to closely follow their intentions and\nrequirements. However, in many practical scenarios, it becomes increasingly\nchallenging for these models to navigate the intricate boundary between\nhelpfulness and safety, especially against highly complex yet potentially\nmalicious instructions. In this work, we introduce INDICT: a new framework that\nempowers LLMs with Internal Dialogues of Critiques for both safety and\nhelpfulness guidance. The internal dialogue is a dual cooperative system\nbetween a safety-driven critic and a helpfulness-driven critic. Each critic\nprovides analysis against the given task and corresponding generated response,\nequipped with external knowledge queried through relevant code snippets and\ntools like web search and code interpreter. We engage the dual critic system in\nboth code generation stage as well as code execution stage, providing\npreemptive and post-hoc guidance respectively to LLMs. We evaluated INDICT on 8\ndiverse tasks across 8 programming languages from 5 benchmarks, using LLMs from\n7B to 70B parameters. We observed that our approach can provide an advanced\nlevel of critiques of both safety and helpfulness analysis, significantly\nimproving the quality of output codes ($+10\\%$ absolute improvements in all\nmodels).",
+            "authors": [
+                "Hung Le",
+                "Yingbo Zhou",
+                "Caiming Xiong",
+                "Silvio Savarese",
+                "Doyen Sahoo"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.02518"
+        },
+        {
+            "id": 49,
+            "title": "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+            "abstract": "Autonomous agents that address day-to-day digital tasks (e.g., ordering\ngroceries for a household), must not only operate multiple apps (e.g., notes,\nmessaging, shopping app) via APIs, but also generate rich code with complex\ncontrol flow in an iterative manner based on their interaction with the\nenvironment. However, existing benchmarks for tool use are inadequate, as they\nonly cover tasks that require a simple sequence of API calls.\n  To remedy this gap, we built $\\textbf{AppWorld Engine}$, a high-quality\nexecution environment (60K lines of code) of 9 day-to-day apps operable via 457\nAPIs and populated with realistic digital activities simulating the lives of\n~100 fictitious users. We then created $\\textbf{AppWorld Benchmark}$ (40K lines\nof code), a suite of 750 natural, diverse, and challenging autonomous agent\ntasks requiring rich and interactive code generation. It supports robust\nprogrammatic evaluation with state-based unit tests, allowing for different\nways of completing a task while also checking for unexpected changes, i.e.,\ncollateral damage. The state-of-the-art LLM, GPT-4o, solves only ~49% of our\n'normal' tasks and ~30% of 'challenge' tasks, while other models solve at least\n16% fewer. This highlights the benchmark's difficulty and AppWorld's potential\nto push the frontiers of interactive coding agents. The project website is\navailable at https://appworld.dev/.",
+            "authors": [
+                "Harsh Trivedi",
+                "Tushar Khot",
+                "Mareike Hartmann",
+                "Ruskin Manku",
+                "Vinty Dong",
+                "Edward Li",
+                "Shashank Gupta",
+                "Ashish Sabharwal",
+                "Niranjan Balasubramanian"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.18901"
+        },
+        {
+            "id": 50,
+            "title": "Interactive Program Synthesis",
+            "abstract": "Program synthesis from incomplete specifications (e.g. input-output examples)\nhas gained popularity and found real-world applications, primarily due to its\nease-of-use. Since this technology is often used in an interactive setting,\nefficiency and correctness are often the key user expectations from a system\nbased on such technologies. Ensuring efficiency is challenging since the highly\ncombinatorial nature of program synthesis algorithms does not fit in a 1-2\nsecond response expectation of a user-facing system. Meeting correctness\nexpectations is also difficult, given that the specifications provided are\nincomplete, and that the users of such systems are typically non-programmers.\n  In this paper, we describe how interactivity can be leveraged to develop\nefficient synthesis algorithms, as well as to decrease the cognitive burden\nthat a user endures trying to ensure that the system produces the desired\nprogram. We build a formal model of user interaction along three dimensions:\nincremental algorithm, step-based problem formulation, and feedback-based\nintent refinement. We then illustrate the effectiveness of each of these forms\nof interactivity with respect to synthesis performance and correctness on a set\nof real-world case studies.",
+            "authors": [
+                "Vu Le",
+                "Daniel Perelman",
+                "Oleksandr Polozov",
+                "Mohammad Raza",
+                "Abhishek Udupa",
+                "Sumit Gulwani"
+            ],
+            "year": 2017,
+            "url": "https://arxiv.org/abs/1703.03539"
+        },
+        {
+            "id": 51,
+            "title": "Interactive Code Generation via Test-Driven User-Intent Formalization",
+            "abstract": "Large language models (LLMs) have shown great potential in automating\nsignificant aspects of coding by producing natural code from informal natural\nlanguage (NL) intent. However, when interacting with LLMs, users have no\nguarantees that the code suggestions produced correctly satisfy the intent they\nprovided. In fact, it is hard to define a notion of correctness since natural\nlanguage can be ambiguous and lacks a formal semantics.\n  In this paper, we propose the workflow of {\\it interactive test-driven code\ngeneration}, which leverages lightweight user feedback to (a) formalize the\nuser intent using generated tests that can be useful for debugging, and (b)\nproduce an improved set of code suggestions by pruning and ranking candidate\ncode suggestions. We describe a language-agnostic abstract algorithm and a\nconcrete implementation TiCoder. We perform an automated evaluation of TiCoder\non the \\emph{MBPP} and \\emph{HumanEval} code generation benchmarks. Our results\nare promising with using the OpenAI Codex LLM: our best algorithm improves the\n\\passk{1} code generation accuracy (in absolute percentages) between $22.49\\%$\nto $37.71\\%$ for MBPP and between $24.79\\%$ to $53.98\\%$ for HumanEval using\nbetween 1 to 5 simulated user queries.",
+            "authors": [
+                "Shuvendu K. Lahiri",
+                "Sarah Fakhoury",
+                "Aaditya Naik",
+                "Georgios Sakkas",
+                "Saikat Chakraborty",
+                "Madanlal Musuvathi",
+                "Piali Choudhury",
+                "Curtis von Veh",
+                "Jeevana Priya Inala",
+                "Chenglong Wang",
+                "Jianfeng Gao"
+            ],
+            "year": 2022,
+            "url": "https://arxiv.org/abs/2208.05950"
+        },
+        {
+            "id": 52,
+            "title": "Improving Code Generation by Training with Natural Language Feedback",
+            "abstract": "The potential for pre-trained large language models (LLMs) to use natural\nlanguage feedback at inference time has been an exciting recent development. We\nbuild upon this observation by formalizing an algorithm for learning from\nnatural language feedback at training time instead, which we call Imitation\nlearning from Language Feedback (ILF). ILF requires only a small amount of\nhuman-written feedback during training and does not require the same feedback\nat test time, making it both user-friendly and sample-efficient. We further\nshow that ILF can be seen as a form of minimizing the KL divergence to the\nground truth distribution and demonstrate a proof-of-concept on a neural\nprogram synthesis task. We use ILF to improve a Codegen-Mono 6.1B model's\npass@1 rate by 38% relative (and 10% absolute) on the Mostly Basic Python\nProblems (MBPP) benchmark, outperforming both fine-tuning on MBPP and\nfine-tuning on repaired programs written by humans. Overall, our results\nsuggest that learning from human-written natural language feedback is both more\neffective and sample-efficient than training exclusively on demonstrations for\nimproving an LLM's performance on code generation tasks.",
+            "authors": [
+                "Angelica Chen",
+                "Jérémy Scheurer",
+                "Tomasz Korbak",
+                "Jon Ander Campos",
+                "Jun Shern Chan",
+                "Samuel R. Bowman",
+                "Kyunghyun Cho",
+                "Ethan Perez"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2303.16749"
+        },
+        {
+            "id": 53,
+            "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+            "abstract": "Like humans, large language models (LLMs) do not always generate the best\noutput on their first try. Motivated by how humans refine their written text,\nwe introduce Self-Refine, an approach for improving initial outputs from LLMs\nthrough iterative feedback and refinement. The main idea is to generate an\ninitial output using an LLMs; then, the same LLMs provides feedback for its\noutput and uses it to refine itself, iteratively. Self-Refine does not require\nany supervised training data, additional training, or reinforcement learning,\nand instead uses a single LLM as the generator, refiner, and feedback provider.\nWe evaluate Self-Refine across 7 diverse tasks, ranging from dialog response\ngeneration to mathematical reasoning, using state-of-the-art (GPT-3.5, ChatGPT,\nand GPT-4) LLMs. Across all evaluated tasks, outputs generated with Self-Refine\nare preferred by humans and automatic metrics over those generated with the\nsame LLM using conventional one-step generation, improving by ~20% absolute on\naverage in task performance. Our work demonstrates that even state-of-the-art\nLLMs like GPT-4 can be further improved at test time using our simple,\nstandalone approach.",
+            "authors": [
+                "Aman Madaan",
+                "Niket Tandon",
+                "Prakhar Gupta",
+                "Skyler Hallinan",
+                "Luyu Gao",
+                "Sarah Wiegreffe",
+                "Uri Alon",
+                "Nouha Dziri",
+                "Shrimai Prabhumoye",
+                "Yiming Yang",
+                "Shashank Gupta",
+                "Bodhisattwa Prasad Majumder",
+                "Katherine Hermann",
+                "Sean Welleck",
+                "Amir Yazdanbakhsh",
+                "Peter Clark"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2303.17651"
+        },
+        {
+            "id": 54,
+            "title": "Teaching Large Language Models to Self-Debug",
+            "abstract": "Large language models (LLMs) have achieved impressive performance on code\ngeneration. However, for complex programming tasks, generating the correct\nsolution in one go becomes challenging, thus some prior works have designed\nprogram repair approaches to improve code generation performance. In this work,\nwe propose Self-Debugging, which teaches a large language model to debug its\npredicted program via few-shot demonstrations. In particular, we demonstrate\nthat Self-Debugging can teach the large language model to perform rubber duck\ndebugging; i.e., without any human feedback on the code correctness or error\nmessages, the model is able to identify its mistakes by investigating the\nexecution results and explaining the generated code in natural language.\nSelf-Debugging achieves the state-of-the-art performance on several code\ngeneration benchmarks, including the Spider dataset for text-to-SQL generation,\nTransCoder for C++-to-Python translation, and MBPP for text-to-Python\ngeneration. On the Spider benchmark where there are no unit tests to verify the\ncorrectness of predictions, Self-Debugging with code explanation consistently\nimproves the baseline by 2-3%, and improves the prediction accuracy on problems\nof the hardest level by 9%. On TransCoder and MBPP where unit tests are\navailable, Self-Debugging improves the baseline accuracy by up to 12%.\nMeanwhile, by leveraging feedback messages and reusing failed predictions,\nSelf-Debugging notably improves sample efficiency, and can match or outperform\nbaseline models that generate more than 10x candidate programs.",
+            "authors": [
+                "Xinyun Chen",
+                "Maxwell Lin",
+                "Nathanael Schärli",
+                "Denny Zhou"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2304.05128"
+        },
+        {
+            "id": 55,
+            "title": "Self-Edit: Fault-Aware Code Editor for Code Generation",
+            "abstract": "Large language models (LLMs) have demonstrated an impressive ability to\ngenerate codes on competitive programming tasks. However, with limited sample\nnumbers, LLMs still suffer from poor accuracy. Inspired by the process of human\nprogramming, we propose a generate-and-edit approach named Self-Edit that\nutilizes execution results of the generated code from LLMs to improve the code\nquality on the competitive programming task. We execute the generated code on\nthe example test case provided in the question and wrap execution results into\na supplementary comment. Utilizing this comment as guidance, our fault-aware\ncode editor is employed to correct errors in the generated code. We perform\nextensive evaluations across two competitive programming datasets with nine\ndifferent LLMs. Compared to directly generating from LLMs, our approach can\nimprove the average of pass@1 by 89\\% on APPS-dev, 31\\% on APPS-test, and 48\\%\non HumanEval over nine popular code generation LLMs with parameter sizes\nranging from 110M to 175B. Compared to other post-processing methods, our\nmethod demonstrates superior accuracy and efficiency.",
+            "authors": [
+                "Kechi Zhang",
+                "Zhuo Li",
+                "Jia Li",
+                "Ge Li",
+                "Zhi Jin"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2305.04087"
+        },
+        {
+            "id": 56,
+            "title": "LeTI: Learning to Generate from Textual Interactions",
+            "abstract": "Fine-tuning pre-trained language models (LMs) is essential for enhancing\ntheir capabilities. Existing techniques commonly fine-tune on input-output\npairs (e.g., instruction tuning) or with numerical rewards that gauge the\noutput quality (e.g., RLHF). We explore LMs' potential to learn from textual\ninteractions (LETI) that not only check their correctness with binary labels\nbut also pinpoint and explain errors in their outputs through textual feedback.\nOur focus is the code generation task, where the model produces code based on\nnatural language instructions. This setting invites a natural and scalable way\nto acquire textual feedback: the error messages and stack traces from code\nexecution using a Python interpreter. LETI iteratively fine-tunes the model,\nusing the LM objective, on a concatenation of natural language instructions,\nLM-generated programs, and textual feedback. Prepended to this fine-tuning\ntext, a binary reward token is used to differentiate correct and buggy\nsolutions. LETI requires no ground-truth outputs for training and even\noutperforms a fine-tuned baseline that does. LETI not only improves the\nperformance of LMs on a code generation dataset MBPP, but also generalizes to\nother datasets. Trained on MBPP, it achieves comparable or better performance\nthan the base LMs on unseen problems in HumanEval. Furthermore, compared to\nbinary feedback, we observe that textual feedback leads to improved generation\nquality and sample efficiency, achieving the same performance with fewer than\nhalf of the gradient steps. LETI is equally applicable in natural language\ntasks when they can be formulated as code generation, which we empirically\nverified on event argument extraction.",
+            "authors": [
+                "Xingyao Wang",
+                "Hao Peng",
+                "Reyhaneh Jabbarvand",
+                "Heng Ji"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2305.10314"
+        },
+        {
+            "id": 57,
+            "title": "Is Self-Repair a Silver Bullet for Code Generation?",
+            "abstract": "Large language models have shown remarkable aptitude in code generation, but\nstill struggle to perform complex tasks. Self-repair -- in which the model\ndebugs and repairs its own code -- has recently become a popular way to boost\nperformance in these settings. However, despite its increasing popularity,\nexisting studies of self-repair have been limited in scope; in many settings,\nits efficacy thus remains poorly understood. In this paper, we analyze Code\nLlama, GPT-3.5 and GPT-4's ability to perform self-repair on problems taken\nfrom HumanEval and APPS. We find that when the cost of carrying out repair is\ntaken into account, performance gains are often modest, vary a lot between\nsubsets of the data, and are sometimes not present at all. We hypothesize that\nthis is because self-repair is bottlenecked by the model's ability to provide\nfeedback on its own code; using a stronger model to artificially boost the\nquality of the feedback, we observe substantially larger performance gains.\nSimilarly, a small-scale study in which we provide GPT-4 with feedback from\nhuman participants suggests that even for the strongest models, self-repair\nstill lags far behind what can be achieved with human-level debugging.",
+            "authors": [
+                "Theo X. Olausson",
+                "Jeevana Priya Inala",
+                "Chenglong Wang",
+                "Jianfeng Gao",
+                "Armando Solar-Lezama"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2306.09896"
+        },
+        {
+            "id": 58,
+            "title": "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback",
+            "abstract": "Humans write code in a fundamentally interactive manner and rely on constant\nexecution feedback to correct errors, resolve ambiguities, and decompose tasks.\nWhile LLMs have recently exhibited promising coding capabilities, current\ncoding benchmarks mostly consider a static instruction-to-code sequence\ntransduction process, which has the potential for error propagation and a\ndisconnect between the generated code and its final execution environment. To\naddress this gap, we introduce InterCode, a lightweight, flexible, and\neasy-to-use framework of interactive coding as a standard reinforcement\nlearning (RL) environment, with code as actions and execution feedback as\nobservations. Our framework is language and platform agnostic, uses\nself-contained Docker environments to provide safe and reproducible execution,\nand is compatible out-of-the-box with traditional seq2seq coding methods, while\nenabling the development of new methods for interactive code generation. We use\nInterCode to create three interactive code environments with Bash, SQL, and\nPython as action spaces, leveraging data from the static NL2Bash, Spider, and\nMBPP datasets. We demonstrate InterCode's viability as a testbed by evaluating\nmultiple state-of-the-art LLMs configured with different prompting strategies\nsuch as ReAct and Plan & Solve. Our results showcase the benefits of\ninteractive code generation and demonstrate that InterCode can serve as a\nchallenging benchmark for advancing code understanding and generation\ncapabilities. InterCode is designed to be easily extensible and can even be\nused to create new tasks such as Capture the Flag, a popular coding puzzle that\nis inherently multi-step and involves multiple programming languages. Project\nsite with code and data: https://intercode-benchmark.github.io",
+            "authors": [
+                "John Yang",
+                "Akshara Prabhakar",
+                "Karthik Narasimhan",
+                "Shunyu Yao"
+            ],
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2306.14898"
+        },
+        {
+            "id": 59,
+            "title": "OpenCodeInterpreter: Integrating Code Generation with Execution and Refinement",
+            "abstract": "The introduction of large language models has significantly advanced code\ngeneration. However, open-source models often lack the execution capabilities\nand iterative refinement of advanced systems like the GPT-4 Code Interpreter.\nTo address this, we introduce OpenCodeInterpreter, a family of open-source code\nsystems designed for generating, executing, and iteratively refining code.\nSupported by Code-Feedback, a dataset featuring 68K multi-turn interactions,\nOpenCodeInterpreter integrates execution and human feedback for dynamic code\nrefinement. Our comprehensive evaluation of OpenCodeInterpreter across key\nbenchmarks such as HumanEval, MBPP, and their enhanced versions from EvalPlus\nreveals its exceptional performance. Notably, OpenCodeInterpreter-33B achieves\nan accuracy of 83.2 (76.4) on the average (and plus versions) of HumanEval and\nMBPP, closely rivaling GPT-4's 84.2 (76.2) and further elevates to 91.6 (84.6)\nwith synthesized human feedback from GPT-4. OpenCodeInterpreter brings the gap\nbetween open-source code generation models and proprietary systems like GPT-4\nCode Interpreter.",
+            "authors": [
+                "Tianyu Zheng",
+                "Ge Zhang",
+                "Tianhao Shen",
+                "Xueling Liu",
+                "Bill Yuchen Lin",
+                "Jie Fu",
+                "Wenhu Chen",
+                "Xiang Yue"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2402.14658"
+        },
+        {
+            "id": 60,
+            "title": "Iterative Refinement of Project-Level Code Context for Precise Code Generation with Compiler Feedback",
+            "abstract": "Large Language Models (LLMs) have shown remarkable progress in automated code\ngeneration. Yet, LLM-generated code may contain errors in API usage, class,\ndata structure, or missing project-specific information. As much of this\nproject-specific context cannot fit into the prompts of LLMs, we must find ways\nto allow the model to explore the project-level code context. We present\nCoCoGen, a new code generation approach that uses compiler feedback to improve\nthe LLM-generated code. CoCoGen first leverages static analysis to identify\nmismatches between the generated code and the project's context. It then\niteratively aligns and fixes the identified errors using information extracted\nfrom the code repository. We integrate CoCoGen with two representative LLMs,\ni.e., GPT-3.5-Turbo and Code Llama (13B), and apply it to Python code\ngeneration. Experimental results show that CoCoGen significantly improves the\nvanilla LLMs by over 80% in generating code dependent on the project context\nand consistently outperforms the existing retrieval-based code generation\nbaselines.",
+            "authors": [
+                "Zhangqian Bi",
+                "Yao Wan",
+                "Zheng Wang",
+                "Hongyu Zhang",
+                "Batu Guan",
+                "Fangxin Lu",
+                "Zili Zhang",
+                "Yulei Sui",
+                "Hai Jin",
+                "Xuanhua Shi"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.16792"
+        },
+        {
+            "id": 61,
+            "title": "CYCLE: Learning to Self-Refine the Code Generation",
+            "abstract": "Pre-trained code language models have achieved promising performance in code\ngeneration and improved the programming efficiency of human developers.\nHowever, their self-refinement capability is typically overlooked by the\nexisting evaluations of code LMs, which focus only on the accuracy of the\none-time prediction. For the cases when code LMs fail to implement the correct\nprogram, developers actually find it hard to debug and fix the faulty\nprediction since it is not written by the developers themselves. Unfortunately,\nour study reveals that code LMs cannot efficiently self-refine their faulty\ngenerations as well.\n  In this paper, we propose CYCLE framework, learning to self-refine the faulty\ngeneration according to the available feedback, such as the execution results\nreported by the test suites. We evaluate CYCLE on three popular code generation\nbenchmarks, HumanEval, MBPP, and APPS. The results reveal that CYCLE\nsuccessfully maintains, sometimes improves, the quality of one-time code\ngeneration, while significantly improving the self-refinement capability of\ncode LMs. We implement four variants of CYCLE with varied numbers of parameters\nacross 350M, 1B, 2B, and 3B, and the experiments show that CYCLE consistently\nboosts the code generation performance, by up to 63.5%, across benchmarks and\nvaried model sizes. We also notice that CYCLE outperforms code LMs that have\n3$\\times$ more parameters in self-refinement.",
+            "authors": [
+                "Yangruibo Ding",
+                "Marcus J. Min",
+                "Gail Kaiser",
+                "Baishakhi Ray"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.18746"
+        },
+        {
+            "id": 62,
+            "title": "LLM-based Test-driven Interactive Code Generation: User Study and Empirical Evaluation",
+            "abstract": "Large language models (LLMs) have shown great potential in automating\nsignificant aspects of coding by producing natural code from informal natural\nlanguage (NL) intent. However, given NL is informal, it does not lend easily to\nchecking that the generated code correctly satisfies the user intent. In this\npaper, we propose a novel interactive workflow TiCoder for guided intent\nclarification (i.e., partial formalization) through tests to support the\ngeneration of more accurate code suggestions. Through a mixed methods user\nstudy with 15 programmers, we present an empirical evaluation of the\neffectiveness of the workflow to improve code generation accuracy. We find that\nparticipants using the proposed workflow are significantly more likely to\ncorrectly evaluate AI generated code, and report significantly less\ntask-induced cognitive load. Furthermore, we test the potential of the workflow\nat scale with four different state-of-the-art LLMs on two python datasets,\nusing an idealized proxy for a user feedback. We observe an average absolute\nimprovement of 38.43% in the pass@1 code generation accuracy for both datasets\nand across all LLMs within 5 user interactions, in addition to the automatic\ngeneration of accompanying unit tests.",
+            "authors": [
+                "Sarah Fakhoury",
+                "Aaditya Naik",
+                "Georgios Sakkas",
+                "Saikat Chakraborty",
+                "Shuvendu K. Lahiri"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2404.10100"
+        },
+        {
+            "id": 63,
+            "title": "SOAP: Enhancing Efficiency of Generated Code via Self-Optimization",
+            "abstract": "Large language models (LLMs) have shown remarkable progress in code\ngeneration, but their generated code often suffers from inefficiency, resulting\nin longer execution times and higher memory consumption. To address this issue,\nwe propose Self Optimization based on OverheAd Profile (SOAP), a\nself-optimization framework that utilizes execution overhead profiles to\nimprove the efficiency of LLM-generated code. SOAP first generates code using\nan LLM, then executes it locally to capture execution time and memory usage\nprofiles. These profiles are fed back to the LLM, which then revises the code\nto reduce overhead. To evaluate the effectiveness of SOAP, we conduct extensive\nexperiments on the EffiBench, HumanEval, and MBPP with 16 open-source and 6\nclosed-source models. Our evaluation results demonstrate that through iterative\nself-optimization, SOAP significantly enhances the efficiency of LLM-generated\ncode. For example, the execution time (ET) of StarCoder2-15B for the EffiBench\ndecreases from 0.93 (s) to 0.12 (s) which reduces 87.1% execution time\nrequirement compared with the initial code. The total memory usage (TMU) of\nStarCoder2-15B also decreases from 22.02 (Mb*s) to 2.03 (Mb*s), which decreases\n90.8% total memory consumption during the execution process. The source code of\nSOAP was released in https://github.com/huangd1999/SOAP.",
+            "authors": [
+                "Dong Huang",
+                "Jianbo Dai",
+                "Han Weng",
+                "Puzhen Wu",
+                "Yuhao Qing",
+                "Jie M. Zhang",
+                "Heming Cui",
+                "Zhijiang Guo"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.15189"
+        },
+        {
+            "id": 64,
+            "title": "Code Repair with LLMs gives an Exploration-Exploitation Tradeoff",
+            "abstract": "Iteratively improving and repairing source code with large language models\n(LLMs), known as refinement, has emerged as a popular way of generating\nprograms that would be too complex to construct in one shot. Given a bank of\ntest cases, together with a candidate program, an LLM can improve that program\nby being prompted with failed test cases. But it remains an open question how\nto best iteratively refine code, with prior work employing simple greedy or\nbreadth-first strategies. We show here that refinement exposes an\nexplore-exploit tradeoff: exploit by refining the program that passes the most\ntest cases, or explore by refining a lesser considered program. We frame this\nas an arm-acquiring bandit problem, which we solve with Thompson Sampling. The\nresulting LLM-based program synthesis algorithm is broadly applicable: Across\nloop invariant synthesis, visual reasoning puzzles, and competition programming\nproblems, we find that our new method can solve more problems using fewer\nlanguage model calls.",
+            "authors": [
+                "Hao Tang",
+                "Keya Hu",
+                "Jin Peng Zhou",
+                "Sicheng Zhong",
+                "Wei-Long Zheng",
+                "Xujie Si",
+                "Kevin Ellis"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.17503"
+        },
+        {
+            "id": 65,
+            "title": "ReflectionCoder: Learning from Reflection Sequence for Enhanced One-off Code Generation",
+            "abstract": "Code generation plays a crucial role in various tasks, such as code\nauto-completion and mathematical reasoning. Previous work has proposed numerous\nmethods to enhance code generation performance, including integrating feedback\nfrom the compiler. Inspired by this, we present ReflectionCoder, a novel\napproach that effectively leverages reflection sequences constructed by\nintegrating compiler feedback to improve one-off code generation performance.\nFurthermore, we propose reflection self-distillation and dynamically masked\ndistillation to effectively utilize these reflection sequences. Extensive\nexperiments on three benchmarks, i.e., HumanEval (+), MBPP (+), and MultiPl-E,\ndemonstrate that models fine-tuned with our method achieve state-of-the-art\nperformance. Notably, ReflectionCoder-DeepSeek-Coder-33B reaches pass@1 of 82.9\n(76.8) on HumanEval (+) and 84.1 (72.0) on MBPP (+), on par with GPT-3.5-Turbo\nand Claude-3-opus, and surpasses early GPT-4. Beyond the code domain, we\nbelieve this approach can benefit other domains that focus on final results and\nrequire long reasoning paths. Code and data are available at\nhttps://github.com/SenseLLM/ReflectionCoder.",
+            "authors": [
+                "Houxing Ren",
+                "Mingjie Zhan",
+                "Zhongyuan Wu",
+                "Aojun Zhou",
+                "Junting Pan",
+                "Hongsheng Li"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.17057"
+        },
+        {
+            "id": 66,
+            "title": "Training LLMs to Better Self-Debug and Explain Code",
+            "abstract": "In the domain of code generation, self-debugging is crucial. It allows LLMs\nto refine their generated code based on execution feedback. This is\nparticularly important because generating correct solutions in one attempt\nproves challenging for complex tasks. Prior works on self-debugging mostly\nfocus on prompting methods by providing LLMs with few-shot examples, which work\npoorly on small open-sourced LLMs. In this work, we propose a training\nframework that significantly improves self-debugging capability of LLMs.\nIntuitively, we observe that a chain of explanations on the wrong code followed\nby code refinement helps LLMs better analyze the wrong code and do refinement.\nWe thus propose an automated pipeline to collect a high-quality dataset for\ncode explanation and refinement by generating a number of explanations and\nrefinement trajectories and filtering via execution verification. We perform\nsupervised fine-tuning (SFT) and further reinforcement learning (RL) on both\nsuccess and failure trajectories with a novel reward design considering code\nexplanation and refinement quality. SFT improves the pass@1 by up to 15.92% and\npass@10 by 9.30% over four benchmarks. RL training brings additional up to\n3.54% improvement on pass@1 and 2.55% improvement on pass@10. The trained LLMs\nshow iterative refinement ability, and can keep refining code continuously.\nLastly, our human evaluation shows that the LLMs trained with our framework\ngenerate more useful code explanations and help developers better understand\nbugs in source code.",
+            "authors": [
+                "Nan Jiang",
+                "Xiaopeng Li",
+                "Shiqi Wang",
+                "Qiang Zhou",
+                "Soneya Binta Hossain",
+                "Baishakhi Ray",
+                "Varun Kumar",
+                "Xiaofei Ma",
+                "Anoop Deoras"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2405.18649"
+        },
+        {
+            "id": 67,
+            "title": "Requirements are All You Need: From Requirements to Code with LLMs",
+            "abstract": "The pervasive use of textual formats in the documentation of software\nrequirements presents a great opportunity for applying large language models\n(LLMs) to software engineering tasks. High-quality software requirements not\nonly enhance the manual software development process but also position\norganizations to fully harness the potential of the emerging LLMs technology.\nThis paper introduces a tailored LLM for automating the generation of code\nsnippets from well-structured requirements documents. This LLM is augmented\nwith knowledge, heuristics, and instructions that are pertinent to the software\ndevelopment process, requirements analysis, object-oriented design, and\ntest-driven development, effectively emulating the expertise of a seasoned\nsoftware engineer. We introduce a \"Progressive Prompting\" method that allows\nsoftware engineers to engage with this LLM in a stepwise manner. Through this\napproach, the LLM incrementally tackles software development tasks by\ninterpreting the provided requirements to extract functional requirements,\nusing these to create object-oriented models, and subsequently generating unit\ntests and code based on the object-oriented designs. We demonstrate the LLM's\nproficiency in comprehending intricate user requirements and producing robust\ndesign and code solutions through a case study focused on the development of a\nweb project. This study underscores the potential of integrating LLMs into the\nsoftware development workflow to significantly enhance both efficiency and\nquality. The tailored LLM is available at\nhttps://chat.openai.com/g/g-bahoiKzkB-software-engineer-gpt.",
+            "authors": [
+                "Bingyang Wei"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2406.10101"
+        },
+        {
+            "id": 68,
+            "title": "I Need Help! Evaluating LLM's Ability to Ask for Users' Support: A Case Study on Text-to-SQL Generation",
+            "abstract": "In this study, we explore the proactive ability of LLMs to seek user support,\nusing text-to-SQL generation as a case study. We propose metrics to evaluate\nthe trade-off between performance improvements and user burden, and investigate\nwhether LLMs can determine when to request help and examine their performance\nwith varying levels of information availability. Our experiments reveal that\nwithout external feedback, many LLMs struggle to recognize their need for\nadditional support. Our findings highlight the importance of external signals\nand provide insights for future research on improving support-seeking\nstrategies.",
+            "authors": [
+                "Cheng-Kuang Wu",
+                "Zhi Rui Tam",
+                "Chao-Chung Wu",
+                "Chieh-Yen Lin",
+                "Hung-yi Lee",
+                "Yun-Nung Chen"
+            ],
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2407.14767"
+        }
+    ]
+}
