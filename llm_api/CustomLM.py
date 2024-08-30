@@ -59,7 +59,6 @@ class CustomLMServer(BaseModel):
         response.raise_for_status()
         
         data = response.json()
-        #print(f"Debug: Response JSON: {data}")
 
         if 'choices' not in data:
             raise KeyError(f"'choices' key not found in the response: {data}")
@@ -109,9 +108,9 @@ class CustomLMServer(BaseModel):
             batched = False
         else:
             batched = True
-
+        print("333333",prompt)
         messages = [{'role': 'user', 'content': pro} for pro in prompt]
-        #print("prompt",prompt)
+        print("2222222",messages)
         # 请求头
         headers = {
             'Authorization': f'Bearer {self.api_token}'
@@ -134,16 +133,11 @@ class CustomLMServer(BaseModel):
             'repetition_penalty': self.repetition_penalty,
             **gen_params
         }
-        #print("1",payload)
-        #print("2",headers)
         # 发起请求
+        print("7777777777",payload)
         response = requests.post(f"{self.api_url}", json=payload, headers=headers, stream=True)
-        #print("3",response.json())
-        #print("4",response.text)
-        #print("Debug: Full Response Text:", response.text)
-        #print("Debug: Response Status Code:", response.status_code)
         response.raise_for_status()
-
+        print("111111",response)
         # 初始化响应字符串
         resp = ''
         # 初始化完成标志
@@ -154,9 +148,7 @@ class CustomLMServer(BaseModel):
         # 解析流式响应
         for line in response.iter_lines():
             if line:
-                #print(f"Raw Streamed Line: {line.decode('utf-8')}")  # 添加这一行
                 data = json.loads(line.decode('utf-8'))
-                #print(f"Debug: Streamed Line Data: {data}")
                 if 'choices' in data:
                     resp += data['choices'][0]['message']['content']
                 if not resp:
@@ -169,6 +161,7 @@ class CustomLMServer(BaseModel):
                 yield ModelStatusCode.STREAM_ING, resp, None
                 if finished:
                     break
+        print("33333333",resp)
         yield ModelStatusCode.END, resp, None
 
 

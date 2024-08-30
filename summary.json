@@ -16,7 +16,8 @@
                 "Graham Neubig"
             ],
             "year": 2022,
-            "url": "https://arxiv.org/abs/2211.10435"
+            "url": "https://arxiv.org/abs/2211.10435",
+            "sentence": "PAL leverizes neural LLMs to generate codes solving natural language problem into runnable steps, with accurate results beating larger models."
         },
         {
             "id": 2,
@@ -29,7 +30,8 @@
                 "William W. Cohen"
             ],
             "year": 2022,
-            "url": "https://arxiv.org/abs/2211.12588"
+            "url": "https://arxiv.org/abs/2211.12588",
+            "sentence": "This study proposes `Program of Thoughts', which uses language models to separate computation from reasoning in numerical reasoning tasks, significantly improving performance over the conventional Chain-of-Thoughts method."
         },
         {
             "id": 3,
@@ -49,7 +51,8 @@
                 "Hongsheng Li"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2308.07921"
+            "url": "https://arxiv.org/abs/2308.07921",
+            "sentence": "This study investigates GPT-4 Code Interpreter's use of code-based self-verification to enhance math problem-solving, achieving a 53.9% to 84.3% accuracy boost."
         },
         {
             "id": 4,
@@ -68,7 +71,8 @@
                 "Hongsheng Li"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2310.03731"
+            "url": "https://arxiv.org/abs/2310.03731",
+            "sentence": "Fine-tuned Language models use code for solving math problems, achieving state-of-the-art results on benchmark datasets."
         },
         {
             "id": 5,
@@ -87,7 +91,8 @@
                 "Brian Ichter"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2312.04474"
+            "url": "https://arxiv.org/abs/2312.04474",
+            "sentence": "Chain of Code enhances language model reasoning by emulating code execution, improving task handling and achieving 12% gains."
         },
         {
             "id": 6,
@@ -99,7 +104,8 @@
                 "Mohit Bansal"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2401.16467"
+            "url": "https://arxiv.org/abs/2401.16467",
+            "sentence": "ReGAL refactors code to discover reusable abstractions, enhancing LLMs' program synthesis across diverse domains."
         },
         {
             "id": 7,
@@ -115,7 +121,8 @@
                 "Heng Ji"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2402.01030"
+            "url": "https://arxiv.org/abs/2402.01030",
+            "sentence": "Executable CodeAct consolidates LLM actions into unified space, enhancing flexibility and performance."
         },
         {
             "id": 8,
@@ -130,7 +137,8 @@
                 "Ting Liu"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2402.10812"
+            "url": "https://arxiv.org/abs/2402.10812",
+            "sentence": "This paper introduces HProPro, a novel program-based prompting framework for hybrid question answering that performs hybrid information-seeking without training specialized retrievers or modal transformations, significantly surpassing baseline systems in few-shot settings."
         },
         {
             "id": 9,
@@ -144,7 +152,8 @@
                 "Saab Mansour"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.02567"
+            "url": "https://arxiv.org/abs/2403.02567",
+            "sentence": "This study introduces xSTREET, a multilingual reasoning dataset, and proposes training with code-augmented data and using code-based inference prompts to improve LLMs' non-English structured reasoning skills."
         },
         {
             "id": 10,
@@ -160,7 +169,8 @@
                 "Manuela Veloso"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2404.13050"
+            "url": "https://arxiv.org/abs/2404.13050",
+            "sentence": "FlowMind automates workflow generation by leveraging LLMs, enhancing RPA for unconventional tasks with hallucination mitigation and secure, user-facilitated processes."
         },
         {
             "id": 11,
@@ -180,7 +190,8 @@
                 "Jinyoung Yeo"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2404.02575"
+            "url": "https://arxiv.org/abs/2404.02575",
+            "sentence": "Language models enhance algorithmic reasoning by simulating pseudocode execution, improving task-level logic."
         },
         {
             "id": 12,
@@ -193,7 +204,8 @@
                 "Yongfeng Zhang"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.06907"
+            "url": "https://arxiv.org/abs/2405.06907",
+            "sentence": "AIOS Compiler uses LLM to interpret and execute natural language programming and flow programming, facilitating programming language evolution."
         },
         {
             "id": 13,
@@ -207,7 +219,8 @@
                 "Jinfeng Bai"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.07551"
+            "url": "https://arxiv.org/abs/2405.07551",
+            "sentence": "MuMath-Code combines tool-using LLMs with multi-perspective data augmentation, achieving state-of-the-art mathematical reasoning performance."
         },
         {
             "id": 14,
@@ -221,7 +234,8 @@
                 "Peter Clark"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.16337"
+            "url": "https://arxiv.org/abs/2405.16337",
+            "sentence": "This paper proposes CoGEX, a method that leverages language models to generate and emulate pseudo-programs for reasoning tasks beyond code-based tasks, improving performance on both algorithmic and soft reasoning tasks."
         },
         {
             "id": 15,
@@ -233,7 +247,8 @@
                 "Yik-Cheung Tam"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.17893"
+            "url": "https://arxiv.org/abs/2405.17893",
+            "sentence": "We propose a method for instructing LLMs to solve arithmetic problems by generating Prolog code, which outperforms existing methods in the GSM8K benchmark and improves training robustness through data augmentation."
         },
         {
             "id": 16,
@@ -247,7 +262,8 @@
                 "Faramarz Fekri"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2406.13764"
+            "url": "https://arxiv.org/abs/2406.13764",
+            "sentence": "Large Language Models (LLMs) can reason unknown-type problems as they are trained on various formalisms to select tactics and write programs effectively for diverse open-ended reasoning tasks.\n"
         },
         {
             "id": 17,
@@ -262,7 +278,8 @@
                 "Dayiheng Liu"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.04078"
+            "url": "https://arxiv.org/abs/2407.04078",
+            "sentence": "This paper proposes DotaMath, a series of LLMs that decompose complex mathematical problems using code and self-correction."
         },
         {
             "id": 18,
@@ -282,7 +299,8 @@
                 "Kai Chen"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.10499"
+            "url": "https://arxiv.org/abs/2407.10499",
+            "sentence": "CIBench evaluates LLMs' capacity for data science tasks via a code interpreter plugin, employing an LLM-human cooperative approach."
         },
         {
             "id": 19,
@@ -295,7 +313,8 @@
                 "Jie Cai"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.16732"
+            "url": "https://arxiv.org/abs/2407.16732",
+            "sentence": "\"PyBench assesses an LLM's Python coding capabilities across diverse real-world applications, highlighting limited open-source model proficiency and offering a superior, fine-tuned PyLlama3 model.\"\n\n"
         },
         {
             "id": 20,
@@ -309,7 +328,8 @@
                 "Nakamasa Inoue"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.19410"
+            "url": "https://arxiv.org/abs/2407.19410",
+            "sentence": "AdaCoder is an adaptive prompt compression framework that enhances visual programmatic models for question answering by generating efficient compressed prompts, without needing additional training for LLMs."
         },
         {
             "id": 21,
@@ -321,7 +341,8 @@
                 "Koichi Shinoda"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.20563"
+            "url": "https://arxiv.org/abs/2407.20563",
+            "sentence": "Introducing PyramidCoder: A hierarchical code generation framework for PVQA, improving accuracy by at least 0.5%, 1.4%, and 2.9% on GQA, VQAv2, and NLVR2 datasets, respectively."
         },
         {
             "id": 22,
@@ -338,7 +359,8 @@
                 "Michael Wooldridge"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2401.09074"
+            "url": "https://arxiv.org/abs/2401.09074",
+            "sentence": "This study assesses Large Language Models' coding and algorithmic task simulation capability, proposing a novel Chain of Simulation prompting method to reduce memorization and enhance simulation performance."
         },
         {
             "id": 23,
@@ -351,7 +373,8 @@
                 "Reyhaneh Jabbarvand"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2402.09664"
+            "url": "https://arxiv.org/abs/2402.09664",
+            "sentence": "CodeMind gauges LLMs' reasoning through tasks like Independent and Dependent Execution Reasoning, and Specification Reasoning, showing better understanding of simpler programs but struggling with complex code."
         },
         {
             "id": 24,
@@ -366,7 +389,8 @@
                 "Le Sun"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.00795"
+            "url": "https://arxiv.org/abs/2403.00795",
+            "sentence": "This study investigates the ability of large language models to understand and execute algorithms described in natural language, finding mixed results but encouraging further exploration of LLM computation capacities."
         },
         {
             "id": 25,
@@ -382,7 +406,8 @@
                 "Jianxin Xue"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.16097"
+            "url": "https://arxiv.org/abs/2403.16097",
+            "sentence": "This study explores the capability of large language models to simulate logic code execution, proposing the Dual Chains of Logic technique to improve accuracy."
         },
         {
             "id": 26,
@@ -397,7 +422,8 @@
                 "Xin Xia"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.16437"
+            "url": "https://arxiv.org/abs/2403.16437",
+            "sentence": "This study proposes an REval framework to evaluate runtime behavior and logical consistency in code reasoning, revealing poor performance in LLMs with an average accuracy of 44.4% and IC score of 10.3, highlighting the need for improved code reasoning capabilities in LLMs."
         },
         {
             "id": 27,
@@ -413,7 +439,8 @@
                 "Pengcheng Yin"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2404.14662"
+            "url": "https://arxiv.org/abs/2404.14662",
+            "sentence": "We teach LLMs to understand and reason about code execution by inspecting traces and using CoT rationales, improving task-solving and generalizing to absent traces."
         },
         {
             "id": 28,
@@ -428,7 +455,8 @@
                 "Shanping Li"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.16974"
+            "url": "https://arxiv.org/abs/2407.16974",
+            "sentence": "SelfPiCo dynamically enhances partial code execution using LLMs, outperforming baseline models by significantly improving the execution success rate and uncovering runtime errors in open-source software and Stack Overflow snippets."
         },
         {
             "id": 29,
@@ -441,7 +469,8 @@
                 "Ge Li"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2304.07590"
+            "url": "https://arxiv.org/abs/2304.07590",
+            "sentence": "This study proposes a self-collaboration framework using LLMs like ChatGPT to generate code, where multiple LLM agents act as experts and collaborate on complex tasks without human intervention."
         },
         {
             "id": 30,
@@ -464,7 +493,8 @@
                 "Maosong Sun"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2307.07924"
+            "url": "https://arxiv.org/abs/2307.07924",
+            "sentence": "ChatDev uses LLM-powered agents for unified, language-based software development across design, coding, and testing phases."
         },
         {
             "id": 31,
@@ -488,7 +518,8 @@
                 "Jürgen Schmidhuber"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2308.00352"
+            "url": "https://arxiv.org/abs/2308.00352",
+            "sentence": "MetaGPT enhances LLM-based multi-agent systems for complex tasks via meta-programming and SOPs for streamlined, human-like collaboration."
         },
         {
             "id": 32,
@@ -503,7 +534,8 @@
                 "Shafiq Joty"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2310.08992"
+            "url": "https://arxiv.org/abs/2310.08992",
+            "sentence": "CodeChain improves computational code generation by iteratively generating and reusing modular code submodules."
         },
         {
             "id": 33,
@@ -517,7 +549,8 @@
                 "Zhi Jin"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2401.07339"
+            "url": "https://arxiv.org/abs/2401.07339",
+            "sentence": "CodeAgent: A novel LLM-based agent system that enhances code generation performance by integrating external tools for real-world repo-level coding challenges, outperforming existing solutions."
         },
         {
             "id": 34,
@@ -533,7 +566,8 @@
                 "Dongmei Zhang"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.13583"
+            "url": "https://arxiv.org/abs/2403.13583",
+            "sentence": "CoCoST improves complex code generation via online searching, correctness testing, input/output serialization, and test case generation, significantly enhancing LLM practicality."
         },
         {
             "id": 35,
@@ -546,7 +580,8 @@
                 "Chen"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.15852"
+            "url": "https://arxiv.org/abs/2403.15852",
+            "sentence": "This study proposes the LCG framework that employs multiple LLM agents to emulate various software process models, improving code quality and consistency compared to baseline, with LCGScrum achieving the best performance."
         },
         {
             "id": 36,
@@ -558,7 +593,8 @@
                 "Michael Pradel"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.17134"
+            "url": "https://arxiv.org/abs/2403.17134",
+            "sentence": "RepairAgent uses an autonomous LLM-based agent to autonomously repair bugs with tools, demonstrating effectiveness in fixing bugs not addressed by prior techniques."
         },
         {
             "id": 37,
@@ -573,7 +609,8 @@
                 "Yu Cheng"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.17927"
+            "url": "https://arxiv.org/abs/2403.17927",
+            "sentence": "MAGIS is an LLM-based framework that leverages multi-agent collaboration to resolve GitHub issues, outperforming single-agent LLMs with an eight-fold increase in resolution rate."
         },
         {
             "id": 38,
@@ -584,7 +621,8 @@
                 "Yoshimasa Nishimura"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2404.02183"
+            "url": "https://arxiv.org/abs/2404.02183",
+            "sentence": "\"Self-Organized Agents: A Multi-Agent Framework for Large-Scale Code Generation and Optimization using LLMs.\""
         },
         {
             "id": 39,
@@ -597,7 +635,8 @@
                 "Abhik Roychoudhury"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2404.05427"
+            "url": "https://arxiv.org/abs/2404.05427",
+            "sentence": "AutoCodeRover automatically improves software by combining LLMs and advanced code search, enhancing bug fixing and feature addition with low cost."
         },
         {
             "id": 40,
@@ -613,7 +652,8 @@
                 "Ofir Press"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.15793"
+            "url": "https://arxiv.org/abs/2405.15793",
+            "sentence": "SWE-agent: Custom agent-computer interface boosts LM agents in automated software engineering tasks, exceeds previous performance."
         },
         {
             "id": 41,
@@ -625,7 +665,8 @@
                 "Md Rizwan Parvez"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.11403"
+            "url": "https://arxiv.org/abs/2405.11403",
+            "sentence": "MapCoder improves code generation by mimicking human programmers with multi-agent prompting, achieving state-of-the-art results on multiple benchmarks."
         },
         {
             "id": 42,
@@ -640,7 +681,8 @@
                 "Xin Xia"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.12641"
+            "url": "https://arxiv.org/abs/2405.12641",
+            "sentence": "In a comprehensive evaluation, ChatGPT exhibits limitations in self-verifying generated code, highlighting the need for guiding questions and accurate test reports to enhance its reliability in software development tasks."
         },
         {
             "id": 43,
@@ -656,7 +698,8 @@
                 "Bing Qin"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.20092"
+            "url": "https://arxiv.org/abs/2405.20092",
+            "sentence": "FunCoder is a code generation framework that uses a divide-and-conquer strategy with functional consensus to produce more complex programs and reduce error propagation. This approach has significantly improved performance over previous state-of-the-art methods."
         },
         {
             "id": 44,
@@ -673,7 +716,8 @@
                 "Cheng Yang"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2406.08979"
+            "url": "https://arxiv.org/abs/2406.08979",
+            "sentence": "Our study presents a groundbreaking multi-agent collaborative framework, Cross-Team Collaboration (CTC), which significantly boosts software development quality and efficiency, paving the way for transformative advancements in AI."
         },
         {
             "id": 45,
@@ -690,7 +734,8 @@
                 "Nagarajan Natarajan"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2406.11638"
+            "url": "https://arxiv.org/abs/2406.11638",
+            "sentence": "MASAI: A modular architecture integrates diverse LLM-agents for efficient, sub-problem solving in software engineering with improved resolution rates on GitHub issues."
         },
         {
             "id": 46,
@@ -703,7 +748,8 @@
                 "Nghi D. Q. Bui"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2406.11912"
+            "url": "https://arxiv.org/abs/2406.11912",
+            "sentence": "AgileCoder is a multi-agent system that enhances software development efficiency using Agile Methodology and a dynamic code graph generator."
         },
         {
             "id": 47,
@@ -715,7 +761,8 @@
                 "Aniruddha Kembhavi"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2406.12276"
+            "url": "https://arxiv.org/abs/2406.12276",
+            "sentence": "CodeNav is an LLM agent that navigates and leverages code repositories to solve queries without manual tool registration."
         },
         {
             "id": 48,
@@ -729,7 +776,8 @@
                 "Doyen Sahoo"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.02518"
+            "url": "https://arxiv.org/abs/2407.02518",
+            "sentence": "INDICT uses internal dialogue of safety and helpfulness critics to enhance LLM code generation, improving output quality by 10%."
         },
         {
             "id": 49,
@@ -747,7 +795,8 @@
                 "Niranjan Balasubramanian"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.18901"
+            "url": "https://arxiv.org/abs/2407.18901",
+            "sentence": "AppWorld Engine and Benchmark offer a high-quality environment and diverse tasks to assess interactive coding agents in realistic digital settings, showcasing their capabilities and challenges."
         },
         {
             "id": 50,
@@ -762,7 +811,8 @@
                 "Sumit Gulwani"
             ],
             "year": 2017,
-            "url": "https://arxiv.org/abs/1703.03539"
+            "url": "https://arxiv.org/abs/1703.03539",
+            "sentence": "Improving program synthesis efficiency and correctness through interactive techniques like incremental algorithms, step-based problem formulation, and feedback-based intent refinement."
         },
         {
             "id": 51,
@@ -782,7 +832,8 @@
                 "Jianfeng Gao"
             ],
             "year": 2022,
-            "url": "https://arxiv.org/abs/2208.05950"
+            "url": "https://arxiv.org/abs/2208.05950",
+            "sentence": "We create interactive test-driven code generation, enhancing large language models by formalizing user intent through generated tests and improving code suggestions."
         },
         {
             "id": 52,
@@ -799,7 +850,8 @@
                 "Ethan Perez"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2303.16749"
+            "url": "https://arxiv.org/abs/2303.16749",
+            "sentence": "\"Imitation learning from Language Feedback (ILF) is a user-friendly, sample-efficient method for training LLMs on natural language feedback, improving code generation tasks,\" suggests a new study published by Shanghai AI Lab."
         },
         {
             "id": 53,
@@ -824,7 +876,8 @@
                 "Peter Clark"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2303.17651"
+            "url": "https://arxiv.org/abs/2303.17651",
+            "sentence": "This paper introduces Self-Refine, an iterative refinement approach using self-feedback to improve LLM outputs without external data, showing ~20% average performance Improvement."
         },
         {
             "id": 54,
@@ -837,7 +890,8 @@
                 "Denny Zhou"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2304.05128"
+            "url": "https://arxiv.org/abs/2304.05128",
+            "sentence": "Large language models learn to self-debug by investigating execution results and explaining code, significantly enhancing code generation accuracy and sample efficiency.\n"
         },
         {
             "id": 55,
@@ -851,7 +905,8 @@
                 "Zhi Jin"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2305.04087"
+            "url": "https://arxiv.org/abs/2305.04087",
+            "sentence": "A self-editing fault-aware code editor improves competitive programming code accuracy by 89-94% utilizing execution results and post-processing edits over raw LLM code output."
         },
         {
             "id": 56,
@@ -864,7 +919,8 @@
                 "Heng Ji"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2305.10314"
+            "url": "https://arxiv.org/abs/2305.10314",
+            "sentence": "LETI fine-tunes LMs through textual feedback on code generation tasks, exceeding baselines without requiring ground-truth outputs and generalizing to other datasets."
         },
         {
             "id": 57,
@@ -878,7 +934,8 @@
                 "Armando Solar-Lezama"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2306.09896"
+            "url": "https://arxiv.org/abs/2306.09896",
+            "sentence": "Self-repair sometimes improves code generation, but gains are often modest and feedback quality often limits effectiveness."
         },
         {
             "id": 58,
@@ -891,7 +948,8 @@
                 "Shunyu Yao"
             ],
             "year": 2023,
-            "url": "https://arxiv.org/abs/2306.14898"
+            "url": "https://arxiv.org/abs/2306.14898",
+            "sentence": "InterCode: A framework for interactive coding that improves execution feedback and reduces errors in LLM-generated code."
         },
         {
             "id": 59,
@@ -908,7 +966,8 @@
                 "Xiang Yue"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2402.14658"
+            "url": "https://arxiv.org/abs/2402.14658",
+            "sentence": "OpenCodeInterpreter integrates code generation, execution, and refinement, outperforming baseline models and rivaling proprietary systems with iterative human feedback."
         },
         {
             "id": 60,
@@ -927,7 +986,8 @@
                 "Xuanhua Shi"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.16792"
+            "url": "https://arxiv.org/abs/2403.16792",
+            "sentence": "CoCoGen improves LLM-generated code by iteratively refining project context with compiler feedback, enhancing context-dependent code generation by over 80%."
         },
         {
             "id": 61,
@@ -940,7 +1000,8 @@
                 "Baishakhi Ray"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2403.18746"
+            "url": "https://arxiv.org/abs/2403.18746",
+            "sentence": "CYCLE framework improves code generation models' ability to refine their own faulty code based on feedback."
         },
         {
             "id": 62,
@@ -954,7 +1015,8 @@
                 "Shuvendu K. Lahiri"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2404.10100"
+            "url": "https://arxiv.org/abs/2404.10100",
+            "sentence": "A study on TiCoder, a novel interactive workflow that improves large language model-based code generation accuracy through test-driven user intent clarification which was found to reduce cognitive load and improve accuracy by 38.43%."
         },
         {
             "id": 63,
@@ -971,7 +1033,8 @@
                 "Zhijiang Guo"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.15189"
+            "url": "https://arxiv.org/abs/2405.15189",
+            "sentence": "SOAP uses execution profiles to iteratively optimize LLM-generated code, significantly reducing execution time and memory usage."
         },
         {
             "id": 64,
@@ -987,7 +1050,8 @@
                 "Kevin Ellis"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.17503"
+            "url": "https://arxiv.org/abs/2405.17503",
+            "sentence": "An LLM-based program synthesis algorithm exploits or explores for optimal code repair using Thompson Sampling."
         },
         {
             "id": 65,
@@ -1002,7 +1066,8 @@
                 "Hongsheng Li"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.17057"
+            "url": "https://arxiv.org/abs/2405.17057",
+            "sentence": "Refining one-off code generation via ReflectionCoder, leveraging compiler feedback to yield top-tier performance on HumanEval, MBPP, and MultiPl-E benchmarks, excelling GPT-3.5-Turbo, Claude-3-opus, and early GPT-4."
         },
         {
             "id": 66,
@@ -1020,7 +1085,8 @@
                 "Anoop Deoras"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2405.18649"
+            "url": "https://arxiv.org/abs/2405.18649",
+            "sentence": "Enables LLMs to refine code iteratively via fine-tuning and reinforcement learning, improving self-debugging and explanations for developers."
         },
         {
             "id": 67,
@@ -1030,7 +1096,8 @@
                 "Bingyang Wei"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2406.10101"
+            "url": "https://arxiv.org/abs/2406.10101",
+            "sentence": "This study proposes a tailored LLM for generating code from requirements, enhancing software development processes."
         },
         {
             "id": 68,
@@ -1045,7 +1112,8 @@
                 "Yun-Nung Chen"
             ],
             "year": 2024,
-            "url": "https://arxiv.org/abs/2407.14767"
+            "url": "https://arxiv.org/abs/2407.14767",
+            "sentence": "We evaluate LLMs' ability to ask for user support, finding they often fail to recognize needing help without external signals."
         }
     ]
 }

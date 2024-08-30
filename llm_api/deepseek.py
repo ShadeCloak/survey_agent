@@ -5,7 +5,7 @@ from openai import OpenAI
 """
 def deepseek_response(prompt):
     client = OpenAI(api_key="sk-cdd4c6ddedbb45e8b9bb8a6fc36a0145", 
-    base_url="https://api.deepseek.com/chat/completions")
+    base_url="https://api.deepseek.com/v1")
 
     response = client.chat.completions.create(
         model="deepseek-chat",
@@ -15,7 +15,7 @@ def deepseek_response(prompt):
         ],
         stream=True
     )
-
+    #print(messages)
     full_response = ""  # 用于存储完整的响应
 
     # 逐步读取流中的每个chunk
@@ -27,6 +27,9 @@ def deepseek_response(prompt):
 
     #print("\n完整的响应:", full_response)  # 最后输出完整的响应
     return full_response
+
+result = deepseek_response("你好")
+print(result)
 """
 
 def deepseek_response(prompt):

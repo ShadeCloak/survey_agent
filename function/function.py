@@ -1,8 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
+from typing import List
 import re
 import json
 import arxiv
+from llm_api.deepseek import deepseek_response
+from llm_api.kimi import Kimi_response
+from llm_api.internlm import get_response
 
 def from_github_get_arxiv_links(url: str) -> list:
     """
@@ -118,6 +122,33 @@ def save_summary_to_json(summaries: list, output_file: str) -> None:
         json.dump(summary_content, f, ensure_ascii=False, indent=4)
 
 def extract_title_as_string(json_file: str) -> str:
+    """
+    从给定的JSON文件中提取所有title，并将其合并成一个字符串，包括每个论文的编号.
+
+    Args:
+        json_file (str): 包含摘要信息的JSON文件路径.
+
+    Returns:
+        str: 合并后的字符串.
+    """
+    with open(json_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    summaries = data.get("content", [])
+    combined_string = ""
+
+    for summary in summaries:
+        paper_id = summary.get("id", "No ID")
+        title = summary.get("title", "No Title")
+        #sentence = summary.get("sentence", "No Title")
+        
+        #summary_text = f"ID: {paper_id}\nTitle: {title}\nsentence:{sentence}\n"
+        summary_text = f"ID: {paper_id}\nTitle: {title}\n"
+        combined_string += summary_text
+
+    return combined_string
+
+def extract_title_sentence_as_string(json_file: str) -> str:
     """
     从给定的JSON文件中提取所有title，并将其合并成一个字符串，包括每个论文的编号.
 
@@ -266,13 +297,80 @@ def extract_and_combine(text):
     
     return score, combined_text
 
+def get_one_sentence(prompt, summary_file):
+    import time
+    with open(summary_file, 'r', encoding='utf-8') as file:
+        data = json.load(file)
 
+    # 遍历每一篇文章
+    for idx, paper in enumerate(data['content']):
+        # 提取标题和摘要
+        title = paper['title']
+        abstract = paper['abstract']
+        
+        # 组合成单独的prompt，每次循环时重置
+        current_prompt = f"{prompt}Title: {title}\nAbstract: {abstract}"
+        print(current_prompt)
+        
+        # 获取response
+        response = get_response(current_prompt)  # 假设这个函数返回一个总结句子
+        
+        # 将生成的句子添加到该论文的字典项中
+        paper['sentence'] = response
+        
+        # 每处理8篇文章暂停60秒
+        if (idx + 1) % 8 == 0:
+            print("Pausing for 60 seconds to avoid exceeding API rate limit...")
+            time.sleep(60)
 
+    # 将更新后的数据写回summary.json文件
+    with open('summary.json', 'w', encoding='utf-8') as file:
+        json.dump(data, file, ensure_ascii=False, indent=4)
 
+    print("Finished processing and saved to summary.json")
 
+def extract_summary_in_batches(json_file: str, batch_size: int = 20) -> List[str]:
+    with open(json_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
+    summaries = data.get("content", [])
+    batched_summaries = [summaries[i:i + batch_size] for i in range(0, len(summaries), batch_size)]
+    
+    combined_batches = []
+    for batch in batched_summaries:
+        combined_string = ""
+        for summary in batch:
+            paper_id = summary.get("id", "No ID")
+            title = summary.get("title", "No Title")
+            abstract = summary.get("abstract", "No Abstract")
+            url = summary.get("url", "No URL")
+            
+            summary_text = f"ID: {paper_id}\nTitle: {title}\nAbstract: {abstract}\nURL: {url}\n\n"
+            combined_string += summary_text
+        combined_batches.append(combined_string)
+    
+    return combined_batches
 
+def extract_sentence_in_batches(json_file: str, batch_size: int = 20) -> List[str]:
+    with open(json_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
+    summaries = data.get("content", [])
+    batched_summaries = [summaries[i:i + batch_size] for i in range(0, len(summaries), batch_size)]
+    
+    combined_batches = []
+    for batch in batched_summaries:
+        combined_string = ""
+        for summary in batch:
+            paper_id = summary.get("id", "No ID")
+            title = summary.get("title", "No Title")
+            sentence = summary.get("sentence", "No Title")
+            
+            summary_text = f"ID: {paper_id}\nTitle: {title}\nSentence: {sentence}\n\n"
+            combined_string += summary_text
+        combined_batches.append(combined_string)
+    
+    return combined_batches
 
 
 
