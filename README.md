@@ -13,7 +13,7 @@ A **Survey Agent** based on the Lagent library was developed, which can **automa
 ## Pipline
 
 <div align="center">
-<img src="./image/pipline.png" width="700" alt="pipline_00">
+<img src="./image/pipline.png" width="900" alt="pipline_00">
 </div>
 
 (Created by ChatGPT o3)
