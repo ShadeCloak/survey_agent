@@ -37,7 +37,7 @@ from function.function import (
 
 
 
-github_url = 'https://github.com/hollowknightone/survey/blob/main/README.md'
+github_url = 'https://github.com/ShadeCloak/survey/blob/main/README.md'
 links = from_github_get_arxiv_links(github_url)
 #summaries = get_arxiv_paper_summary(links)
 summaries = get_arxiv_paper_summary_2(links)
