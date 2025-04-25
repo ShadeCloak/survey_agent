@@ -10,11 +10,13 @@
 
 A **Survey Agent** based on the Lagent library was developed, which can **automatically extract Arxiv links** from libraries in the repository of the GitHub and write LaTex-formatted review articles based on multiple articles (**68 articles** in the example).
 
-## Pipline (Created by ChatGPT o3)
+## Pipline
 
 <div align="center">
 <img src="./image/pipline.png" width="700" alt="pipline_00">
 </div>
+
+(Created by ChatGPT o3)
 
 ## Key Results
 
