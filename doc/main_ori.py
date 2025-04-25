@@ -36,37 +36,46 @@ from function.function import (
 )
 
 
-
+# 1.新建summary.json
+"""
 github_url = 'https://github.com/hollowknightone/survey/blob/main/README.md'
 links = from_github_get_arxiv_links(github_url)
 #summaries = get_arxiv_paper_summary(links)
 summaries = get_arxiv_paper_summary_2(links)
 save_summary_to_json(summaries, 'summary.json')
-
-
+"""
+#摘要浓缩
+"""
 get_one_sentence(prompt_to_one_sentence,"summary.json")
+"""
+#2.根据摘要进行分组
 
-
+# 只使用summary_title来写目录，但internlm效果不好，用GPT
 summary_title = extract_title_as_string('summary.json')
-
+"""
 prompt = f"{prompt_to_catalogue}以下是几篇相关研究方向论文的ID和题目：{summary_title}"
 print(prompt)
-#catalogue = deepseek_response(prompt) 
-
-
+#catalogue = deepseek_response(prompt) 用GPT
+# 多轮对话：在创建完成目录之后，要求写出abs，ins，con,用GPT
+#
+"""
+#分批次？？
+"""
 summary_batches = extract_summary_in_batches('summary.json', batch_size=6)
 for i, batch in enumerate(summary_batches):
     if i==0:
         prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和摘要：{batch}辅助信息：{summary_title}"
         print(prompt)
         save_markdown(prompt, f"prompt\\{i}_batch.md")
-        #catalog = get_response(prompt)
+        #mu_lu = get_response(prompt)
     else:
         prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和摘要：{batch}辅助信息：{summary_title}之前所有批次的临时目录："
         print(prompt)
         save_markdown(prompt, f"prompt\\{i}_batch.md")
-        #catalog = get_response(prompt)
-
+        #mu_lu = get_response(prompt)
+    #print("当前目录：",mu_lu)
+"""
+#分批次？？每次给sentence而非摘要
 summary_batches = extract_sentence_in_batches('summary.json', batch_size=10)
 for i, batch in enumerate(summary_batches):
     if i==0:
@@ -74,22 +83,25 @@ for i, batch in enumerate(summary_batches):
         prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和一句话描述：{batch}"
         print(prompt)
         #save_markdown(prompt, f"prompt\\{i}_batch.md")
-        catalog = deepseek_response(prompt)
+        mu_lu = deepseek_response(prompt)
     else:
-        #prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和一句话描述：{batch}辅助信息：{summary_title}之前所有批次的临时目录：{catalog}"
-        prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和一句话描述：{batch}之前所有批次的临时目录：{catalog}"
+        #prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和一句话描述：{batch}辅助信息：{summary_title}之前所有批次的临时目录：{mu_lu}"
+        prompt = f"{prompt_of_batches},以下是第{i+1}批次的论文ID，题目,和一句话描述：{batch}之前所有批次的临时目录：{mu_lu}"
         print(prompt)
         #save_markdown(prompt, f"prompt\\{i}_batch.md")
-        catalog = deepseek_response(prompt)
-    #print("当前目录：",catalog)
-print(catalog)
+        mu_lu = deepseek_response(prompt)
+    #print("当前目录：",mu_lu)
+print(mu_lu)
+"""
 
-
+# 3.分组写段落
 i=1
 final = ""
 bibs = ""
 catalogue_sections = paragraphing(catalogue, "[over]")
 for x in catalogue_sections:
+    #print(x)
+    """"""
     if i < 5:
         i = i+1
         continue
@@ -137,7 +149,7 @@ for x in catalogue_sections:
     save_markdown(x, f"result\\{number}ex_again_section.md")
     save_markdown(section, f"result\\{number}ex_again_section.md")
     save_markdown(bib, f"result\\{number}ex_again_bib.md")
-
+    """"""
     print(i,"组总结完成")
     bibs = bibs + bib + "\n"
     i = i+1
@@ -151,7 +163,7 @@ for x in catalogue_sections:
 
 save_markdown(final, "result\example822_latex.md")
 save_markdown(bibs, "result\example822_bib.md")
-
+"""
 
 
 

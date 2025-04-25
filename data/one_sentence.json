@@ -1,0 +1,277 @@
+{
+    "number": 68,
+    "content": [
+        {
+            "id": 1,
+            "response": "PAL combines LLMs with program generation and a Python interpreter to improve logic and arithmetic in reasoning tasks."
+        },
+        {
+            "id": 2,
+            "response": "Disentangling computation from reasoning in language models improves performance on numerical reasoning tasks."
+        },
+        {
+            "id": 3,
+            "response": "GPT-4 Code Interpreter, enhanced with code-based self-verification, significantly boosts accuracy on math word problems."
+        },
+        {
+            "id": 4,
+            "response": "Fine-tuned open-source LLMs can use code to derive math equations, enhancing mathematical reasoning, achieving top performance on MATH and GSM8K datasets."
+        },
+        {
+            "id": 5,
+            "response": "This study presents Chain of Code, extending language models to reason via code by emulating interpreters, showing improved semantic task reasoning and outperforming baseline methods with an 84% score on BIG-Bench Hard (+12% to Chain of Thought)."
+        },
+        {
+            "id": 6,
+            "response": "ReGAL optimizes program synthesis by refactoring code into reusable functions, improving efficiency and accuracy across diverse domains."
+        },
+        {
+            "id": 7,
+            "response": "Using executable Python code for LLM agent actions, CodeAct, enhances task success by up to 20%."
+        },
+        {
+            "id": 8,
+            "response": "HProPro, a novel program-based prompting framework, provides an effective approach for hybrid question answering by integrating diverse functions for processing varied data sources and modalities, surpassing baseline systems and achieving top performance in few-shot settings."
+        },
+        {
+            "id": 9,
+            "response": "Improving LLMs' multilingual structured reasoning via code-augmented training and step-by-step code primitives in prompts."
+        },
+        {
+            "id": 10,
+            "response": "FlowMind automates workflow generation with LLMs, enhancing RPA flexibility and ensuring data integrity."
+        },
+        {
+            "id": 11,
+            "response": "Transforming reasoning tasks into pseudocode, then executing them improves algorithmic reasoning in language models."
+        },
+        {
+            "id": 12,
+            "response": "AIOS Compiler: Using LLMs to Interpret Natural Language and Flow Programming for AI Agents."
+        },
+        {
+            "id": 13,
+            "response": "MuMath-Code integrates tool-use LLMs via multi-perspective data augmentation, enhancing mathematical reasoning by synthesizing code-nested solutions and leveraging external Python interpreters."
+        },
+        {
+            "id": 14,
+            "response": "\"Learning to Reason by Generating, Emulating, and Searching Programs with Language Models.\""
+        },
+        {
+            "id": 15,
+            "response": "Generating Prolog programs for solving arithmetic problems improves accuracy in LLM-based problem-solving beyond Chain of Thought."
+        },
+        {
+            "id": 16,
+            "response": "Study on large language model's ability to solve reasoning problems without prior knowledge of task demands, through a novel approach of 'reasoning in the wild' with programs."
+        },
+        {
+            "id": 17,
+            "response": "This study introduces DotaMath, a series of LLMs that tackle complex mathematical tasks through decomposition, code assistance, and self-correction, achieving remarkable performance in handling intricate mathematical reasoning problems."
+        },
+        {
+            "id": 18,
+            "response": "This paper introduces CIBench, a framework for evaluating LLMs' use of code interpreters in data science tasks with AI assistance."
+        },
+        {
+            "id": 19,
+            "response": "Introducing PyBench, a benchmark for evaluating LLM agents on various real-world coding tasks, demonstrating the need for robust Python knowledge and reasoning abilities."
+        },
+        {
+            "id": 20,
+            "response": "AdaCoder compresses prompts for visual question answering, reducing token length by 71.1% while maintaining high performance."
+        },
+        {
+            "id": 21,
+            "response": "PyramidCoder improves PVQA accuracy by 0.5% on GQA, 1.4% on VQAv2, and 2.9% on NLVR2 using a single LLM with hierarchical prompting."
+        },
+        {
+            "id": 22,
+            "response": "Large Language Models struggle with code simulation due to reliance on pattern recognition and memorization; we introduce Chain of Simulation (CoSm) to enhance their performance."
+        },
+        {
+            "id": 23,
+            "response": "CodeMind: Evaluates LLMs' code reasoning through IER, DER, SR; reveals complexity challenges."
+        },
+        {
+            "id": 24,
+            "response": "This paper investigates the ability of large language models to understand and execute algorithms described in natural language."
+        },
+        {
+            "id": 25,
+            "response": "This study explores LLMs' ability to simulate logical solvers in predicting outputs of logical programs, introducing novel datasets and the Dual Chains of Logic technique, and achieving a 7.06% accuracy improvement with GPT-4-Turbo."
+        },
+        {
+            "id": 26,
+            "response": "\"Code LLMs performance on runtime behavior reasoning and incremental consistency evaluation in REval framework show deficiencies, calling for advances.\""
+        },
+        {
+            "id": 27,
+            "response": "NExT method teaches LLMs to reason about code execution by using self-training on synthetic rationale sets."
+        },
+        {
+            "id": 28,
+            "response": "SelfPiCo enhances code execution of partial code by incorporating a refined LLM, improving upon existing tools with iterative learning and achieving 72.7% execution success on open-source code and 83.3% on Stack Overflow snippets."
+        },
+        {
+            "id": 29,
+            "response": "We propose a self-collaboration framework for code generation using LLMs like ChatGPT, improving code quality by simulating teamwork among different role-defined virtual experts without human involvement."
+        },
+        {
+            "id": 30,
+            "response": "This paper introduces ChatDev, a novel software development framework leveraging large language models to facilitate unified, language-based collaboration among communication-driven agents, improving system design and debugging through natural and programming language communication."
+        },
+        {
+            "id": 31,
+            "response": "MetaGPT is a multi-agent collaboration framework that optimizes LLM-based solutions through meta-programming and efficient human workflows."
+        },
+        {
+            "id": 32,
+            "response": "This paper proposes CodeChain, a framework that enhances modular code generation by LLMs through iterative self-revision guided by representative sub-modules, significantly improving modularity and correctness in programming tasks."
+        },
+        {
+            "id": 33,
+            "response": "CodeAgent boosts LLM performance in repo-level code generation using integrated tools, outperforming commercial products like Github Copilot."
+        },
+        {
+            "id": 34,
+            "response": "The CoCoST framework enhances complex code generation by combining online searching with planned queries and correctness testing for code refinement, significantly improving the practicality of LLMs.\n\n"
+        },
+        {
+            "id": 35,
+            "response": "This paper presents LCG, a framework that uses Large Language Models (LLMs) to emulate software process models, enhancing code quality through collaborative agent efforts."
+        },
+        {
+            "id": 36,
+            "response": "RepairAgent is an autonomous, LLM-based agent that autonomously repairs bugs by interleaving information gathering, repair ingredient gathering, and validation, guided by a finite state machine."
+        },
+        {
+            "id": 37,
+            "response": "MAGIS proposes an LLM-based framework to improve GitHub issue resolution, outperforming individual LLMs with improved collaboration among multiple agents."
+        },
+        {
+            "id": 38,
+            "response": "This work presents the Self-Organized multi-Agent framework (SoA), a novel approach that leverages the automatic multiplication of LLM agents for scalable and efficient large-scale code generation and optimization."
+        },
+        {
+            "id": 39,
+            "response": "AutoCodeRover improves software by combining LLMs with code search to create context-aware patches, outperforming recent AI approaches in issue resolution on GitHub."
+        },
+        {
+            "id": 40,
+            "response": "\"SWE-agent enhances LM agents' software engineering abilities via a specialized agent-computer interface, achieving state-of-the-art performance.\""
+        },
+        {
+            "id": 41,
+            "response": "MapCoder improves code generation by mimicking human developers through multi-agent prompting, achieving state-of-the-art results in competitive problem solving."
+        },
+        {
+            "id": 42,
+            "response": "This study evaluates ChatGPT's self-verification capability in code-related tasks and finds it often incorrectly validates incorrect code, with potential improvements through guiding questions and test reports."
+        },
+        {
+            "id": 43,
+            "response": "FunCoder combines divide-and-conquer with functional consensus for effective code generation."
+        },
+        {
+            "id": 44,
+            "response": "To abbreviate the abstract into a single sentence with a maximum of 30 words, I begin with identifying the core elements of the abstract:\n\n- **Multi-Agent** (indicating the use of multiple agents)\n- **Software Development** (the primary application)\n- **LLMs** (Large Language Models, which serve as the foundation)\n- **Cross-Team Collaboration** (CTC, the innovative approach)\n\nFrom this, I generate an initial draft: \"This paper introduces a novel software development framework using Large Language Models, where multiple agents collaborate across teams to explore multiple decision paths, improving on both scalability and quality.\" \n\nI then condense this to fit the 30-word limit: \"Multi-agent, LLM-driven software development improves quality via scalable Cross-Team Collaboration to explore diverse decision paths."
+        },
+        {
+            "id": 45,
+            "response": "MASAI introduces a modular architecture for software-engineering AI agents, improving problem-solving and achieving 28.33% resolution rate on SWE-bench Lite, while also enhancing performance via custom objectives and strategies."
+        },
+        {
+            "id": 46,
+            "response": "This paper introduces AgileCoder, a multi-agent system that integrates Agile Methodology to enhance software development efficiency through collaborative agents and dynamic code dependency generation."
+        },
+        {
+            "id": 47,
+            "response": "CodeNav is an LLM agent that automatically indexes and uses real-world code repositories to solve user queries, outperforming tool-use agents."
+        },
+        {
+            "id": 48,
+            "response": "INDICT enhances code generation safety and helpfulness using dual critiquing systems."
+        },
+        {
+            "id": 49,
+            "response": "\"AppWorld Benchmark: A Comprehensive Tool Use Benchmark Suite for Interactive Coding Agents.\""
+        },
+        {
+            "id": 50,
+            "response": "Using interactive techniques, we improve the efficiency and correctness of program synthesis from incomplete specifications."
+        },
+        {
+            "id": 51,
+            "response": "This paper proposes interactive test-driven code generation, using user feedback to formalize intent and improve code suggestions, showing significant accuracy improvements on MBPP and HumanEval benchmarks."
+        },
+        {
+            "id": 52,
+            "response": "This paper proposes a novel training method called Imitation learning from Language Feedback (ILF) to improve pre-trained large language models in code generation tasks using minimal human feedback, significantly enhancing performance and efficiency over traditional fine-tuning methods."
+        },
+        {
+            "id": 53,
+            "response": "Self-Refine iteratively refines LLM outputs with self-provided feedback without extra training, improving task performance by 20% on average."
+        },
+        {
+            "id": 54,
+            "response": "We show that teaching large language models to self-debug improves code generation and is more efficient and accurate than current techniques."
+        },
+        {
+            "id": 55,
+            "response": "Self-Edit, a fault-aware code editor, enhances LLM-generated code accuracy by 89% on APPS-dev, 31% on APPS-test, and 48% on HumanEval."
+        },
+        {
+            "id": 56,
+            "response": "\"Fine-tuning LM via textual feedback from code execution significantly enhances performance and scalability in code generation tasks.\"\n\nThis one-sentence summary reflects the main findings of the study that fine-tuning pre-trained language models using textual feedback derived from error messages and stack traces from code execution can lead to substantial improvements in the models' performance, especially in code generation tasks. It encapsulates the essence of the method, its specific application in the domain of code generation, and its potential benefits without exceeding the specified word limit."
+        },
+        {
+            "id": 57,
+            "response": "Self-repair for code generation is often effective but gains vary, limited by feedback capabilities and suggesting significant human superiority."
+        },
+        {
+            "id": 58,
+            "response": "InterCode: A RL benchmark for interactive coding with execution feedback, facilitating safer, more accurate AI code generation."
+        },
+        {
+            "id": 59,
+            "response": "\"OpenCodeInterpreter leverages open-source models and Code-Feedback datasets to generate, execute, and refine code, outperforming proprietary systems like GPT-4 Code Interpreter.\""
+        },
+        {
+            "id": 60,
+            "response": "CoCoGen iteratively refines project-level code context, using compiler feedback to enhance precision in LLM-generated code."
+        },
+        {
+            "id": 61,
+            "response": "This research proposes the CYCLE framework to train code language models to self-improve code generation based on feedback, enhancing their accuracy and refinement capabilities."
+        },
+        {
+            "id": 62,
+            "response": "A novel LLM-based approach, TiCoder, guides intent clarification via tests, improving code generation accuracy and reducing cognitive load, with notable performance boosts across state-of-the-art models."
+        },
+        {
+            "id": 63,
+            "response": "SOAP improves LLM-generated code efficiency by iteratively optimizing based on execution profiles, reducing execution time and memory usage."
+        },
+        {
+            "id": 64,
+            "response": "Our study demonstrates an explore-exploit tradeoff in code refinement using LLMs and presents an LLM-based program synthesis algorithm that effectively trades exploration and exploitation using Thompson Sampling."
+        },
+        {
+            "id": 65,
+            "response": "ReflectionCoder enhances one-off code generation using reflection sequences and feedback, achieving state-of-the-art performance onHumanEval (+) andMBPP (+)."
+        },
+        {
+            "id": 66,
+            "response": "We enhance LLMs' self-debugging capabilities with an auto-generated explanatory dataset, improving code correction accuracy via supervised & reinforcement training."
+        },
+        {
+            "id": 67,
+            "response": "This paper proposes a tailored LLM for automatic code generation from structured requirements, enhancing software development efficiency and quality."
+        },
+        {
+            "id": 68,
+            "response": "This study evaluates LLMs' ability to recognize & request user support in text-to-SQL tasks, revealing reliance on external signals."
+        }
+    ]
+}
