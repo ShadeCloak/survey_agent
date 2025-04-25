@@ -6,6 +6,12 @@
 [![Survey Example](https://img.shields.io/badge/Survey_Example-FFD21E?style=for-the-badge)](https://github.com/ShadeCloak/survey_agent/blob/main/Recent_Advances_in_Code_Reasoning_and_Generation_with_Large_Language_Models_A_Survey.pdf)
 
 
+</div>
+
 A **Survey Agent** based on the Lagent library was developed, which can **automatically extract Arxiv links** from libraries in the repository of the GitHub and write LaTex-formatted review articles based on multiple articles (**68 articles** in the example).
 
+## Key Results
+
+<div align="center">
+<img src="./image/Survey_example.png" width="700" alt="Survey_example_00">
 </div>
