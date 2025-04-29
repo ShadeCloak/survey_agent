@@ -8,7 +8,7 @@
 
 </div>
 
-A **Survey Agent** based on the Lagent library was developed, which can **automatically extract Arxiv links** from libraries in the repository of the GitHub and write LaTex-formatted review articles based on multiple articles (**68 articles** in the example).
+An open-source pipeline built on the Lagent that automatically scans arXiv paper links, and uses LLM to generate **abstracts, tables of contents, quality scores, and iterative rewrites**, ultimately exporting survey text and BibTeX citations in LaTeX format. The reference demo collected and learned **68 papers** in less than six minutes, greatly reducing researchers’ manual curation time.
 
 ## Pipline
 
